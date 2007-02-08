@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.isounifi.com/OTCDerivatives.rdfs#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://www.isounifi.com/OTCDerivatives.rdfs">
+  <owl:Ontology rdf:about=""/>
+  <rdfs:Class rdf:ID="AmericanExercise">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Exercise"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A type defining the exercise period for an American style option together with any rules governing the notional amount of the underlying which can be exercised on any given exercise date and any associated exercise fees.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="RelativeDates">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="RelativeDateOffset"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A type describing a set of dates defined as relative to another set of dates.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AdjustedRelativeDateOffset">
+    <rdfs:comment xml:lang="en">A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date) plus optional date adjustments.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#RelativeDateOffset"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="BusinessCenter">
+    <rdfs:comment xml:lang="en">A code identifying a financial business center location. A business center is drawn from the list identified by the business center scheme.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AdjustableDates">
+    <rdfs:comment xml:lang="en">A type for defining a series of dates that shall be subject to adjustment if they would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the dates.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AdjustableDate">
+    <rdfs:comment xml:lang="en">A type for defining a date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="DayTypeEnum"/>
+  <rdfs:Class rdf:ID="BusinessDayAdjustments">
+    <rdfs:comment xml:lang="en">A type defining the business day convention and financial business centers used for adjusting any relevant date if it would otherwise fall on a day that is not a business day in the specified business centers.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AdjustableOrRelativeDates">
+    <rdfs:comment xml:lang="en">A type giving the choice between defining a series of dates as an explicit list of dates together with applicable adjustments or as relative to some other series of (anchor) dates.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="HourMinuteTime">
+    <rdfs:comment xml:lang="en">A type defining a time specified in hh:mm:ss format where the second component must be '00', e.g. 11am would be represented as 11:00:00.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="DateReference">
+    <rdfs:comment xml:lang="en">Reference to an identified date or complex date structure.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="BusinessDayConventionEnum">
+    <rdfs:comment xml:lang="en">The convention for adjusting any relevant date if it would otherwise fall on a day that is not a valid business day. Note that FRN is included here as a type of business day convention although it does not strictly fall within ISDA's definition of a Business Day Convention and does not conform to the simple definition given above.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="BusinessCenters">
+    <rdfs:comment xml:lang="en">A type for defining financial business centers used in determining whether a day is a business day or not. A list of business centers may be ordered in the document alphabetically based on business center code. An FpML document containing an unordered business center list is still regarded as a conformant document.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="ScheduleReference">
+    <rdfs:comment xml:lang="en">Reference to a schedule of rates or amounts.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AdjustableDate2">
+    <rdfs:comment xml:lang="en">A type that is different from AdjustableDate in two regards. First, date adjustments can be specified with either a dateAdjustments element or a reference to an existing dateAdjustments element. Second, it does not require the specification of date adjustments.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Interval"/>
+  <rdfs:Class rdf:ID="CalculationPeriodFrequency">
+    <rdfs:comment xml:lang="en">A type defining the frequency at which calculation period end dates occur within the regular part of the calculation period schedule and thier roll date convention.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Interval"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="BusinessCenterTime">
+    <rdfs:comment xml:lang="en">A type for defining a time with respect to a business center location. For example, 11:00am London time.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AdjustableOrRelativeDate">
+    <rdfs:comment xml:lang="en">A type giving the choice between defining a date as an explicit date together with applicable adjustments or as relative to some other (anchor) date.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="RelativeDateSequence"/>
+  <rdfs:Class rdf:ID="PartialExercise">
+    <rdfs:comment xml:lang="en">A type defining partial exercise. As defined in the 2000 ISDA Definitions, Section 12.3 Partial Exercise, the buyer of the option may exercise all or less than all the notional amount of the underlying swap but may not be less than the minimum notional amount (if specified) and must be an integral multiple of the integral multiple amount if specified.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="DateRange">
+    <rdfs:comment xml:lang="en">A type defining a contiguous series of calendar dates. The date range is defined as all the dates between and including the first and the last date. The first date must fall before the last date.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="PeriodEnum"/>
+  <rdfs:Class rdf:ID="AdjustableRelativeOrPeriodicDates">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="BusinessDayAdjustementsReference">
+    <rdfs:comment xml:lang="en">Reference to a business day adjustments structure.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Address">
+    <rdfs:comment xml:lang="en">A type that represents a physical postal address.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#RelativeDateOffset">
+    <rdfs:comment xml:lang="en">A type defining a date (referred to as the derived date) as a relative offset from another date (referred to as the anchor date). If the anchor date is itself an adjustable date then the offset is assumed to be calculated from the adjusted anchor date. A number of different scenarios can be supported, namely; 1) the derived date my simply be a number of calendar periods (days, weeks, months or years) preceding or following the anchor date; 2) the unadjusted derived date may be a number of calendar periods(days, weeks, months or years) preceding or following the anchor date with the resulting unadjusted derived date subject to adjustment in accordance with a specified business day convention, i.e. the derived date must fall on a good business day; 3) the derived date may be a number of business days preceding or following the anchor date. Note that the businessDayConvention specifies any required adjustment to the unadjusted derived date. A
+				negative or positive value in the periodMultiplier indicates whether the unadjusted derived precedes or follows the anchor date. The businessDayConvention should contain a value NONE if the day type element contains a value of Business (since specifying a negative or positive business days offset would already guarantee that the derived date would fall on a good business day in the specified business centers).</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Offset"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AccountReference">
+    <rdfs:comment xml:lang="en">Reference to an account.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Country"/>
+  <rdfs:Class rdf:ID="BusinessCentersReference">
+    <rdfs:comment xml:lang="en">A pointer style reference to a set of financial business centers defined elsewhere in the document.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="PeriodicDates"/>
+  <rdfs:Class rdf:ID="StreetAddress">
+    <rdfs:comment xml:lang="en">A type that describes the set of street and building number information that identifies a postal address within a city.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="RollConventionEnum"/>
+  <rdfs:Class rdf:about="#Offset">
+    <rdfs:comment xml:lang="en">A type defining an offset used in calculating a new date relative to a reference date. Currently, the only offsets defined are expected to be expressed as either calendar or business day offsets.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Interval"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="IdentifiedDate">
+    <rdfs:comment xml:lang="en">A date which can be referenced elsewhere.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="MultipleExercise">
+    <rdfs:subClassOf rdf:resource="#PartialExercise"/>
+    <rdfs:comment xml:lang="en">A type definint multiple exercise. As defining in the 200 ISDA Definitions, Section 12.4. Multiple Exercise, the buyer of the option has the right to exercise all or less than all the unexercised notional amount of the underlying swap on one or more days in the exercise period, but on any such day may not exercise less than the minimum notional amount or more than the maximum notional amount, and if an integral multiple amount is specified, the notional exercised must be equal to or, be an integral multiple of, the integral multiple amount.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:ID="period">
+    <rdfs:comment xml:lang="en">A time period, e.g. a day, week, month, year or term of the stream. If the periodMultiplier value is 0 (zero) then period must contain the value D (day).</rdfs:comment>
+    <rdfs:range rdf:resource="#PeriodEnum"/>
+    <rdfs:domain rdf:resource="#Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="businessCenter">
+    <rdfs:range rdf:resource="#BusinessCenter"/>
+    <rdfs:comment xml:lang="en">null</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#BusinessCenters"/>
+          <rdfs:Class rdf:about="#BusinessCenterTime"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:ID="postalCode">
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The code, required for computerised mail sorting systems, that is allocated to a physical address by a national postal authority.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="unadjustedDate">
+    <rdfs:range rdf:resource="#IdentifiedDate"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#AdjustableDate"/>
+          <rdfs:Class rdf:about="#AdjustableDate2"/>
+          <rdfs:Class rdf:about="#AdjustableDates"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">A date subject to adjustment.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="rollConvention">
+    <rdfs:domain rdf:resource="#CalculationPeriodFrequency"/>
+    <rdfs:comment xml:lang="en">Used in conjunction with a frequency and the regular period start date of a calculation period, determines each calculation period end date within the regular part of a calculation period schedule.</rdfs:comment>
+    <rdfs:range rdf:resource="#RollConventionEnum"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="scheduleBounds">
+    <rdfs:range rdf:resource="#DateRange"/>
+    <rdfs:domain rdf:resource="#RelativeDates"/>
+    <rdfs:comment xml:lang="en">The first and last dates of a schedule. This can be used to restrict the range of values in a reference series of dates.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="integralMultipleAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#PartialExercise"/>
+    <rdfs:comment xml:lang="en">A notional amount which restricts the amount of notional that can be exercised when partial exercise or multiple exercise is applicable. The integral multiple amount defines a lower limit of notional that can be exercised and also defines a unit multiple of notional that can be exercised, i.e. only integer multiples of this amount can be exercised.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="minimumNotionalAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#PartialExercise"/>
+    <rdfs:comment xml:lang="en">The minimum notional amount that can be exercised on a given exercise date. See multipleExercise.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="unadjustedLastDate">
+    <rdfs:domain rdf:resource="#DateRange"/>
+    <rdfs:comment xml:lang="en">The last date of a date range.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="latestExerciseTime">
+    <rdfs:range rdf:resource="#BusinessCenterTime"/>
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:comment xml:lang="en">For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next exercise business day.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="earliestExerciseTime">
+    <rdfs:range rdf:resource="#BusinessCenterTime"/>
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:comment xml:lang="en">The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) i) on the expriation date, in the case of a European style option, (ii) on each bermuda option exercise date and the expiration date, in the case of a Bermuda style option the commencement date to, and including, the expiration date , in the case of an American option.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="maximumNotionalAmount">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">The maximum notional amount that can be exercised on a given exercise date.</rdfs:comment>
+    <rdfs:domain rdf:resource="#MultipleExercise"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="relativeDateSequence">
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:range rdf:resource="#RelativeDateSequence"/>
+    <rdfs:domain rdf:resource="#AdjustableRelativeOrPeriodicDates"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="relevantUnderlyingDate">
+    <rdfs:comment xml:lang="en">The daye on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the effective date, in an extendible/cancelable provision it is the termination date).</rdfs:comment>
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:range rdf:resource="#AdjustableOrRelativeDates"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="businessCentersReference">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#BusinessDayAdjustments"/>
+          <rdfs:Class rdf:about="#RelativeDateOffset"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">A pointer style reference to a set of financial business centers defined elsewhere in the document. This set of business centers is used to determine whether a particular day is a business day or not.</rdfs:comment>
+    <rdfs:range rdf:resource="#BusinessCentersReference"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="dateAdjustmentsReference">
+    <rdfs:comment xml:lang="en">A pointer style reference to date adjustments defined elsewhere in the document.</rdfs:comment>
+    <rdfs:range rdf:resource="#BusinessDayAdjustementsReference"/>
+    <rdfs:domain rdf:resource="#AdjustableDate2"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="dateRelativeTo">
+    <rdfs:range rdf:resource="#DateReference"/>
+    <rdfs:comment xml:lang="en">Specifies the anchor as an href attribute. The href attribute value is a pointer style reference to the element or component elsewhere in the document where the anchor date is defined.</rdfs:comment>
+    <rdfs:domain rdf:resource="#RelativeDateOffset"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="relativeDate">
+    <rdfs:domain rdf:resource="#AdjustableOrRelativeDate"/>
+    <rdfs:comment xml:lang="en">A date specified as some offset to another date (the anchor date).</rdfs:comment>
+    <rdfs:range rdf:resource="#RelativeDateOffset"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="adjustableDates">
+    <rdfs:comment xml:lang="en">A series of dates that shall be subject to adjustment if they would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.</rdfs:comment>
+    <rdfs:range rdf:resource="#AdjustableDates"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#AdjustableOrRelativeDates"/>
+          <rdfs:Class rdf:about="#AdjustableRelativeOrPeriodicDates"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:ID="hourMinuteTime">
+    <rdfs:range rdf:resource="#HourMinuteTime"/>
+    <rdfs:domain rdf:resource="#BusinessCenterTime"/>
+    <rdfs:comment xml:lang="en">A time specified in hh:mm:ss format where the second component must be '00', e.g. 11am would be represented as 11:00:00.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="adjustableDate">
+    <rdfs:domain rdf:resource="#AdjustableOrRelativeDate"/>
+    <rdfs:comment xml:lang="en">A date that shall be subject to adjustment if it would otherwise fall on a day that is not a business day in the specified business centers, together with the convention for adjusting the date.</rdfs:comment>
+    <rdfs:range rdf:resource="#AdjustableDate"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="code">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#Country"/>
+          <rdfs:Class rdf:about="#BusinessCenter"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:ID="countryScheme">
+    <rdfs:domain rdf:resource="#Country"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="calculationPeriodDatesAdjustments">
+    <rdfs:domain rdf:resource="#PeriodicDates"/>
+    <rdfs:range rdf:resource="#BusinessDayAdjustments"/>
+    <rdfs:comment xml:lang="en">The business day convention to apply to each calculation period end date if it would otherwise fall on a day that is not a business day in the specified financial business centers.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="commencementDate">
+    <rdfs:comment xml:lang="en">The first day of the exercise period for an American style option.</rdfs:comment>
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:range rdf:resource="#AdjustableOrRelativeDate"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="multipleExercise">
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:comment xml:lang="en">As defined in the 2000 ISDA Definitions, Section 12.4. Multiple Exercise, the buyer of the option has the right to exercise all or less than all the unexercised notional amount of the underlying swap on one or more days in the exercise period, but on any such day may not exercise less than the minimum notional amount or more that the maximum notional amount, and if an integral multiple amount is specified, the notional amount exercised must be equal to, or be an intergral multiple of, the integral multiple amount.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="calculationStartDate">
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:domain rdf:resource="#PeriodicDates"/>
+    <rdfs:range rdf:resource="#AdjustableOrRelativeDate"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="date">
+    <rdfs:comment xml:lang="en">null</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#IdentifiedDate"/>
+          <rdfs:Class rdf:about="#HourMinuteTime"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="unadjustedFirstDate">
+    <rdfs:comment xml:lang="en">The first date of a date range.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#DateRange"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="periodMultiplier">
+    <rdfs:comment xml:lang="en">A time period multiplier, e.g. 1, 2 or 3 etc. A negative value can be used when specifying an offset relative to another date, e.g. -2 days. If the period value is T (Term) then periodMultiplier must contain the value 1.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Interval"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="href">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#AccountReference"/>
+          <rdfs:Class rdf:about="#BusinessCentersReference"/>
+          <rdfs:Class rdf:about="#BusinessDayAdjustementsReference"/>
+          <rdfs:Class rdf:about="#DateReference"/>
+          <rdfs:Class rdf:about="#ScheduleReference"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="businessDayConvention">
+    <rdfs:range rdf:resource="#BusinessDayConventionEnum"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#BusinessDayAdjustments"/>
+          <rdfs:Class rdf:about="#RelativeDateOffset"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">The convention for adjusting a date if it would otherwise fall on a day that is not a business day.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="city">
+    <rdfs:comment xml:lang="en">The city component of a postal address.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="periodSkip">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="en">The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are relative to every second date in the referenced schedule. If present this should have a value greater than 1.</rdfs:comment>
+    <rdfs:domain rdf:resource="#RelativeDates"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="dateAdjustments">
+    <rdfs:range rdf:resource="#BusinessDayAdjustments"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#AdjustableDate"/>
+          <rdfs:Class rdf:about="#AdjustableDate2"/>
+          <rdfs:Class rdf:about="#AdjustableDates"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">The business day convention and financial business centers used for adjusting the date if it would otherwise fall on a day that is not a business date in the specified business centers.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="exerciseFeeSchedule">
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:comment xml:lang="en">The fees associated with an exercise date. The fees are conditional on the exercise occuring. The fees can be specified as actual currency amounts or as percentages of the notional amount being exercised.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="dayType">
+    <rdfs:domain rdf:resource="#Offset"/>
+    <rdfs:range rdf:resource="#DayTypeEnum"/>
+    <rdfs:comment xml:lang="en">In the case of an offset specified as a number of days, this element defines whether consideration is given as to whether a day is a good business day or not. If a day type of business days is specified then non-business days are ignored when calculating the offset. The financial business centers to use for determination of business days are implied by the context in which this element is used. This element must only be included when the offset is specified as a number of days. If the offset is zero days then the dayType element should not be included.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="state">
+    <rdfs:comment xml:lang="en">A country subdivision used in postal addresses in some countries. For example, US states, Canadian provinces, Swiss cantons.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Address"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="streetAddress">
+    <rdfs:comment xml:lang="en">The set of street and building number information that identifies a postal address within a city.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="#StreetAddress"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="expirationDate">
+    <rdfs:range rdf:resource="#AdjustableOrRelativeDate"/>
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:comment xml:lang="en">The last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="country">
+    <rdfs:domain rdf:resource="#Address"/>
+    <rdfs:range rdf:resource="#Country"/>
+    <rdfs:comment xml:lang="en">The ISO 3166 standard code for the country within which the postal address is located.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:ID="periodicDates">
+    <rdfs:range rdf:resource="#PeriodicDates"/>
+    <rdfs:domain rdf:resource="#AdjustableRelativeOrPeriodicDates"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="relativeDateAdjustments">
+    <rdfs:domain rdf:resource="#AdjustedRelativeDateOffset"/>
+    <rdfs:comment xml:lang="en">The business day convention and financial business centers used for adjusting the relative date if it would otherwise fall on a day that is not a business date in the specified business centers.</rdfs:comment>
+    <rdfs:range rdf:resource="#BusinessDayAdjustments"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="calculationPeriodFrequency">
+    <rdfs:domain rdf:resource="#PeriodicDates"/>
+    <rdfs:comment xml:lang="en">The frequency at which calculation period end dates occur with the regular part of the calculation period schedule and their roll date convention.</rdfs:comment>
+    <rdfs:range rdf:resource="#CalculationPeriodFrequency"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="calculationEndDate">
+    <rdfs:range rdf:resource="#AdjustableOrRelativeDate"/>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:domain rdf:resource="#PeriodicDates"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="streetLine">
+    <rdfs:comment xml:lang="en">An individual line of street and building number information, forming part of a postal address.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#StreetAddress"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="relativeDates">
+    <rdfs:comment xml:lang="en">A series of dates specified as some offset to another series of dates (the anchor dates).</rdfs:comment>
+    <rdfs:domain rdf:resource="#AdjustableOrRelativeDates"/>
+    <rdfs:range rdf:resource="#RelativeDates"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="expirationTime">
+    <rdfs:domain rdf:resource="#AmericanExercise"/>
+    <rdfs:comment xml:lang="en">The latest time for exercise on expirationDate.</rdfs:comment>
+    <rdfs:range rdf:resource="#BusinessCenterTime"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="notionalReference">
+    <rdfs:comment xml:lang="en">A pointer style reference to the associated notional schedule defined elsewhere in the document.</rdfs:comment>
+    <rdfs:range rdf:resource="#ScheduleReference"/>
+    <rdfs:domain rdf:resource="#PartialExercise"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="businessCenters">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="#BusinessDayAdjustments"/>
+          <rdfs:Class rdf:about="#RelativeDateOffset"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:range rdf:resource="#BusinessCenters"/>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2.1, Build 365)  http://protege.stanford.edu -->
