@@ -1,4 +1,4 @@
-; Thu Feb 08 00:21:38 GMT 2007
+; Thu Feb 08 00:54:22 GMT 2007
 ; 
 ;+ (version "3.2.1")
 ;+ (build "Build 365")
@@ -6,11 +6,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[OTCDerivatives_ProjectKB_Instance_54]
-		[OTCDerivatives_ProjectKB_Instance_55]
-		[OTCDerivatives_ProjectKB_Instance_56]
-		[OTCDerivatives_ProjectKB_Instance_57]
-		[OTCDerivatives_ProjectKB_Instance_58]))
+		[OTCDerivatives_ProjectKB_Instance_49]
+		[OTCDerivatives_ProjectKB_Instance_50]
+		[OTCDerivatives_ProjectKB_Instance_51]
+		[OTCDerivatives_ProjectKB_Instance_52]
+		[OTCDerivatives_ProjectKB_Instance_53]))
 
 ([CLSES_TAB] of  Widget
 
@@ -7125,30 +7125,30 @@
 ([OTCDerivatives_ProjectKB_Instance_43] of  Property_List
 )
 
-([OTCDerivatives_ProjectKB_Instance_5] of  Property_List
-)
-
-([OTCDerivatives_ProjectKB_Instance_54] of  String
+([OTCDerivatives_ProjectKB_Instance_49] of  String
 
 	(name "owl:Class")
 	(string_value "%3ANAME"))
 
-([OTCDerivatives_ProjectKB_Instance_55] of  String
+([OTCDerivatives_ProjectKB_Instance_5] of  Property_List
+)
+
+([OTCDerivatives_ProjectKB_Instance_50] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([OTCDerivatives_ProjectKB_Instance_56] of  String
+([OTCDerivatives_ProjectKB_Instance_51] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([OTCDerivatives_ProjectKB_Instance_57] of  String
+([OTCDerivatives_ProjectKB_Instance_52] of  String
 
 	(name "owl:Thing")
 	(string_value "%3ANAME"))
 
-([OTCDerivatives_ProjectKB_Instance_58] of  String
+([OTCDerivatives_ProjectKB_Instance_53] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
@@ -7195,12 +7195,12 @@
 		[KB_713803_Instance_693]
 		[KB_313796_Instance_943]
 		[KB_938545_Instance_495]
-		[STANDARD_CLASS_FORM_WIDGET]
 		[KB_713803_Instance_303]
+		[STANDARD_CLASS_FORM_WIDGET]
 		[KB_313796_Instance_852]
 		[Instance_1005]
-		[KB_301165_Instance_1013]
 		[Instance_581]
+		[KB_301165_Instance_1013]
 		[KB_938545_Instance_412]
 		[KB_764103_Instance_545]
 		[KB_713803_Instance_390]
@@ -7243,12 +7243,12 @@
 		"owl:Class"
 		"rdfs:Container"
 		"owl:Ontology"
-		":TO"
-		"xsd:gMonthDay"
 		"owl:DataRange"
+		"xsd:gMonthDay"
+		":TO"
 		"xsd:NMTOKEN"
-		"xsd:QName"
 		"xsd:unsignedInt"
+		"xsd:QName"
 		"owl:FunctionalProperty"
 		"xsd:long"
 		"owl:onProperty"
@@ -7276,41 +7276,41 @@
 		"rdf:rest"
 		"xsd:decimal"
 		"rdf:subject"
-		"owl:sameAs"
-		"xsd:Name"
-		"rdf:value"
 		"owl:SymmetricProperty"
+		"rdf:value"
+		"xsd:Name"
+		"owl:sameAs"
 		"xsd:byte"
-		"owl:differentFrom"
 		"owl:AllDifferent"
-		"rdf:Property"
+		"owl:differentFrom"
 		"owl:Nothing"
-		"owl:cardinality"
+		"rdf:Property"
 		"owl:InverseFunctionalProperty"
+		"owl:cardinality"
 		"xsd:nonNegativeInteger"
 		"rdf:Statement"
-		":FROM"
 		"rdfs:Literal"
-		"owl:disjointWith"
+		":FROM"
 		"xsd:anySimpleType"
+		"owl:disjointWith"
 		"owl:minCardinality"
 		"xsd:ID"
 		"xsd:gDay"
 		"xsd:gYearMonth"
-		"xsd:NCName"
 		"owl:distinctMembers"
+		"xsd:NCName"
 		"xsd:nonPositiveInteger"
 		"rdfs:Datatype"
-		":DIRECTED-BINARY-RELATION"
-		"xsd:token"
 		"owl:TransitiveProperty"
-		"xsd:IDREF"
-		"xsd:ENTITY"
+		"xsd:token"
+		":DIRECTED-BINARY-RELATION"
 		"xsd:normalizedString"
+		"xsd:ENTITY"
+		"xsd:IDREF"
 		"xsd:gMonth"
-		"rdf:type"
-		"owl:oneOf"
 		"owl:maxCardinality"
+		"owl:oneOf"
+		"rdf:type"
 		"rdf:object")
 	(journaling_enabled FALSE)
 	(next_frame_number 0)
