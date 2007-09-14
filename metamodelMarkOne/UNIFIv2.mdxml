@@ -188,14 +188,6 @@
 					<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_11_0_1_34140642_1150143109197_71843_169' name='' visibility='public' value='0'/>
 				</ownedEnd>
 			</ownedMember>
-			<ownedMember xmi:type='uml:Extension' xmi:id='_11_0_1_bd502fb_1149586590078_921371_1078' name='' visibility='public' isLeaf='false' isAbstract='false' isDerived='false'>
-				<memberEnd xmi:idref='_11_0_1_bd502fb_1149586590078_327096_1079'/>
-				<memberEnd xmi:idref='_11_0_1_bd502fb_1149586590078_591243_1080'/>
-				<ownedEnd xmi:type='uml:ExtensionEnd' xmi:id='_11_0_1_bd502fb_1149586590078_591243_1080' name='extension_' visibility='private' isOrdered='false' isUnique='true' isLeaf='false' isStatic='false' isReadOnly='false' isDerived='false' isDerivedUnion='false' aggregation='composite' type='_11_0_1_bd502fb_1149586585671_764380_1076' association='_11_0_1_bd502fb_1149586590078_921371_1078'>
-					<upperValue xmi:type='uml:LiteralInteger' xmi:id='_11_0_1_bd502fb_1149586590078_693419_1082' name='' visibility='public' value='1'/>
-					<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_11_0_1_bd502fb_1149586590078_207371_1081' name='' visibility='public' value='0'/>
-				</ownedEnd>
-			</ownedMember>
 			<ownedMember xmi:type='uml:Extension' xmi:id='_12_1_1_6a60191_1177510329665_9528_145' name='' visibility='public' isLeaf='false' isAbstract='false' isDerived='false'>
 				<memberEnd xmi:idref='_12_1_1_6a60191_1177510329665_368867_146'/>
 				<memberEnd xmi:idref='_12_1_1_6a60191_1177510329665_175686_147'/>
@@ -436,19 +428,6 @@
 								<type xmi:type='uml:Class' href='http://schema.omg.org/spec/UML/2.0/uml.xml#Diagram'>
 									<xmi:Extension extender='MagicDraw UML 12.5' extenderID='MagicDraw UML 12.5'>
 										<referenceExtension referentPath='UML Standard Profile::UML2.0 Metamodel::Classes::Kernel::Diagram' referentType='Class'/>
-									</xmi:Extension>
-								</type>
-							</ownedAttribute>
-						</ownedMember>
-						<ownedMember xmi:type='uml:Stereotype' xmi:id='_11_0_1_bd502fb_1149586585671_764380_1076' name='messageSet' visibility='public' isLeaf='false' isAbstract='false' isActive='false'>
-							<ownedComment xmi:type='uml:Comment' xmi:id='_11_0_1_34140642_1150488016171_833866_212' body='Message Set is a set of Message Definitions.'>
-								<annotatedElement xmi:idref='_11_0_1_bd502fb_1149586585671_764380_1076'/>
-							</ownedComment>
-							<generalization xmi:type='uml:Generalization' xmi:id='_11_0_1_34140642_1150143719150_665311_967' isSubstitutable='false' general='_11_0_1_34140642_1150050831244_870563_299'/>
-							<ownedAttribute xmi:type='uml:Property' xmi:id='_11_0_1_bd502fb_1149586590078_327096_1079' name='base_Package' visibility='private' isOrdered='false' isUnique='true' isLeaf='false' isStatic='false' isReadOnly='false' isDerived='false' isDerivedUnion='false' aggregation='none' association='_11_0_1_bd502fb_1149586590078_921371_1078'>
-								<type xmi:type='uml:Class' href='http://schema.omg.org/spec/UML/2.0/uml.xml#Package'>
-									<xmi:Extension extender='MagicDraw UML 12.5' extenderID='MagicDraw UML 12.5'>
-										<referenceExtension referentPath='UML Standard Profile::UML2.0 Metamodel::Classes::Kernel::Package' referentType='Class'/>
 									</xmi:Extension>
 								</type>
 							</ownedAttribute>
@@ -1437,6 +1416,27 @@
 							<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_11_0_1_bd502fb_1149513445203_714387_659' name='' visibility='public' value='0'/>
 						</ownedEnd>
 					</ownedMember>
+					<ownedMember xmi:type='uml:Stereotype' xmi:id='_11_0_1_bd502fb_1149586585671_764380_1076' name='messageSet' visibility='public' isLeaf='false' isAbstract='false' isActive='false'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_11_0_1_34140642_1150488016171_833866_212' body='Message Set is a set of Message Definitions.'>
+							<annotatedElement xmi:idref='_11_0_1_bd502fb_1149586585671_764380_1076'/>
+						</ownedComment>
+						<generalization xmi:type='uml:Generalization' xmi:id='_11_0_1_34140642_1150143719150_665311_967' isSubstitutable='false' general='_11_0_1_34140642_1150050831244_870563_299'/>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_11_0_1_bd502fb_1149586590078_327096_1079' name='base_Package' visibility='private' isOrdered='false' isUnique='true' isLeaf='false' isStatic='false' isReadOnly='false' isDerived='false' isDerivedUnion='false' aggregation='none' association='_11_0_1_bd502fb_1149586590078_921371_1078'>
+							<type xmi:type='uml:Class' href='http://schema.omg.org/spec/UML/2.0/uml.xml#Package'>
+								<xmi:Extension extender='MagicDraw UML 12.5' extenderID='MagicDraw UML 12.5'>
+									<referenceExtension referentPath='UML Standard Profile::UML2.0 Metamodel::Classes::Kernel::Package' referentType='Class'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+					</ownedMember>
+					<ownedMember xmi:type='uml:Extension' xmi:id='_11_0_1_bd502fb_1149586590078_921371_1078' name='' visibility='public' isLeaf='false' isAbstract='false' isDerived='false'>
+						<memberEnd xmi:idref='_11_0_1_bd502fb_1149586590078_327096_1079'/>
+						<memberEnd xmi:idref='_11_0_1_bd502fb_1149586590078_591243_1080'/>
+						<ownedEnd xmi:type='uml:ExtensionEnd' xmi:id='_11_0_1_bd502fb_1149586590078_591243_1080' name='extension_' visibility='private' isOrdered='false' isUnique='true' isLeaf='false' isStatic='false' isReadOnly='false' isDerived='false' isDerivedUnion='false' aggregation='composite' type='_11_0_1_bd502fb_1149586585671_764380_1076' association='_11_0_1_bd502fb_1149586590078_921371_1078'>
+							<upperValue xmi:type='uml:LiteralInteger' xmi:id='_11_0_1_bd502fb_1149586590078_693419_1082' name='' visibility='public' value='1'/>
+							<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_11_0_1_bd502fb_1149586590078_207371_1081' name='' visibility='public' value='0'/>
+						</ownedEnd>
+					</ownedMember>
 				</ownedMember>
 				<ownedMember xmi:type='uml:Package' xmi:id='_12_1_1_6a60191_1177938437029_987028_158' name='ExternalMessaging' visibility='public'>
 					<ownedMember xmi:type='uml:Stereotype' xmi:id='_11_0_1_bd502fb_1149583439546_688483_2' name='convergenceDocumentation' visibility='public' isLeaf='false' isAbstract='false' isActive='false'>
@@ -1595,7 +1595,7 @@
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='false'/>
+					<active xmi:value='true'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramPropertiesShape' xmi:id='_11_0_1_34140642_1150144218260_911188_1572'>
 							<elementID xmi:idref='_11_0_1_34140642_1150144218260_194528_1569'/>
@@ -1619,7 +1619,7 @@
 
 &lt;tr text=$$textcolor$$&gt;
 &lt;td nowrap style=&quot;border-width: 1; border-style: solid;border-color: #424242&quot;&gt;Modification date&lt;/td&gt;
-&lt;td style=&quot;border-width: 1; border-style: solid; border-color: #424242&quot;&gt;14/09/07&lt;/span&gt; 16:35&lt;/td&gt;
+&lt;td style=&quot;border-width: 1; border-style: solid; border-color: #424242&quot;&gt;14/09/07&lt;/span&gt; 16:44&lt;/td&gt;
 &lt;/tr&gt;
 </text>
 						</mdElement>
@@ -7024,7 +7024,7 @@
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='60'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='true'/>
+					<active xmi:value='false'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramPropertiesShape' xmi:id='_12_5_1_6a60191_1189603717805_991086_1477'>
 							<elementID xmi:idref='_12_5_1_6a60191_1189603717805_235914_1463'/>
@@ -9067,7 +9067,7 @@
 					<mdElement elementClass='StringProperty'>
 						<propertyID>DIAGRAMS_LAYOUT</propertyID>
 						<propertyDescriptionID>DIAGRAMS_LAYOUT_DESCRIPTION</propertyDescriptionID>
-						<value>0 0 0 14 0 0 0 1 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 38 0 39 0 36 0 30 0 33 0 37 0 31 0 37 0 38 0 30 0 35 0 5f 0 32 0 33 0 35 0 39 0 31 0 34 0 5f 0 31 0 34 0 36 0 33 0 0 0 1 0 0 0 ce 0 0 0 e4 0 0 0 7 0 0 0 a 0 0 0 2a 0 5f 0 31 0 31 0 5f 0 30 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 35 0 30 0 31 0 34 0 34 0 32 0 31 0 38 0 32 0 36 0 30 0 5f 0 31 0 39 0 34 0 35 0 32 0 38 0 5f 0 31 0 35 0 36 0 39 0 0 0 28 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 37 0 37 0 39 0 33 0 38 0 38 0 37 0 31 0 30 0 37 0 33 0 5f 0 35 0 34 0 37 0 38 0 36 0 31 0 5f 0 32 0 39 0 35 0 0 0 2a 0 5f 0 31 0 31 0 5f 0 30 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 35 0 30 0 31 0 34 0 33 0 39 0 33 0 36 0 33 0 38 0 35 0 5f 0 31 0 38 0 39 0 32 0 38 0 31 0 5f 0 31 0 32 0 38 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 37 0 38 0 36 0 35 0 37 0 36 0 35 0 39 0 34 0 32 0 31 0 5f 0 32 0 37 0 36 0 38 0 32 0 36 0 5f 0 31 0 34 0 39 0 33 0 0 0 27 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 38 0 33 0 33 0 39 0 31 0 37 0 34 0 33 0 34 0 36 0 38 0 5f 0 35 0 36 0 36 0 35 0 38 0 36 0 5f 0 36 0 30 0 36 0 33 0 0 0 26 0 5f 0 31 0 31 0 5f 0 30 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 34 0 39 0 36 0 32 0 37 0 38 0 36 0 35 0 38 0 32 0 38 0 5f 0 34 0 39 0 38 0 38 0 37 0 5f 0 34 0 35 0 0 0 28 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 37 0 38 0 37 0 31 0 39 0 37 0 35 0 32 0 33 0 34 0 33 0 5f 0 36 0 35 0 36 0 36 0 38 0 33 0 5f 0 33 0 33 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 38 0 39 0 36 0 30 0 33 0 37 0 31 0 37 0 38 0 30 0 35 0 5f 0 32 0 33 0 35 0 39 0 31 0 34 0 5f 0 31 0 34 0 36 0 33 0 0 0 27 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 38 0 33 0 33 0 37 0 31 0 35 0 32 0 39 0 30 0 37 0 39 0 5f 0 35 0 34 0 37 0 30 0 30 0 37 0 5f 0 31 0 38 0 32 0 34 0 0 0 28 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 37 0 38 0 36 0 35 0 34 0 39 0 39 0 33 0 35 0 36 0 32 0 5f 0 31 0 32 0 39 0 31 0 30 0 32 0 5f 0 38 0 33 0 31 </value>
+						<value>0 0 0 14 0 0 0 1 0 0 0 2a 0 5f 0 31 0 31 0 5f 0 30 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 35 0 30 0 31 0 34 0 34 0 32 0 31 0 38 0 32 0 36 0 30 0 5f 0 31 0 39 0 34 0 35 0 32 0 38 0 5f 0 31 0 35 0 36 0 39 0 0 0 1 0 0 0 ce 0 0 0 e4 0 0 0 0 0 0 0 a 0 0 0 2a 0 5f 0 31 0 31 0 5f 0 30 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 35 0 30 0 31 0 34 0 34 0 32 0 31 0 38 0 32 0 36 0 30 0 5f 0 31 0 39 0 34 0 35 0 32 0 38 0 5f 0 31 0 35 0 36 0 39 0 0 0 28 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 37 0 37 0 39 0 33 0 38 0 38 0 37 0 31 0 30 0 37 0 33 0 5f 0 35 0 34 0 37 0 38 0 36 0 31 0 5f 0 32 0 39 0 35 0 0 0 2a 0 5f 0 31 0 31 0 5f 0 30 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 35 0 30 0 31 0 34 0 33 0 39 0 33 0 36 0 33 0 38 0 35 0 5f 0 31 0 38 0 39 0 32 0 38 0 31 0 5f 0 31 0 32 0 38 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 37 0 38 0 36 0 35 0 37 0 36 0 35 0 39 0 34 0 32 0 31 0 5f 0 32 0 37 0 36 0 38 0 32 0 36 0 5f 0 31 0 34 0 39 0 33 0 0 0 27 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 38 0 33 0 33 0 39 0 31 0 37 0 34 0 33 0 34 0 36 0 38 0 5f 0 35 0 36 0 36 0 35 0 38 0 36 0 5f 0 36 0 30 0 36 0 33 0 0 0 26 0 5f 0 31 0 31 0 5f 0 30 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 34 0 39 0 36 0 32 0 37 0 38 0 36 0 35 0 38 0 32 0 38 0 5f 0 34 0 39 0 38 0 38 0 37 0 5f 0 34 0 35 0 0 0 28 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 37 0 38 0 37 0 31 0 39 0 37 0 35 0 32 0 33 0 34 0 33 0 5f 0 36 0 35 0 36 0 36 0 38 0 33 0 5f 0 33 0 33 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 38 0 39 0 36 0 30 0 33 0 37 0 31 0 37 0 38 0 30 0 35 0 5f 0 32 0 33 0 35 0 39 0 31 0 34 0 5f 0 31 0 34 0 36 0 33 0 0 0 27 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 38 0 33 0 33 0 37 0 31 0 35 0 32 0 39 0 30 0 37 0 39 0 5f 0 35 0 34 0 37 0 30 0 30 0 37 0 5f 0 31 0 38 0 32 0 34 0 0 0 28 0 5f 0 31 0 32 0 5f 0 31 0 5f 0 31 0 5f 0 62 0 64 0 35 0 30 0 32 0 66 0 62 0 5f 0 31 0 31 0 37 0 38 0 36 0 35 0 34 0 39 0 39 0 33 0 35 0 36 0 32 0 5f 0 31 0 32 0 39 0 31 0 30 0 32 0 5f 0 38 0 33 0 31 </value>
 						<multiline xmi:value='false'/>
 					</mdElement>
 					<mdElement elementClass='StringProperty'>
@@ -9145,7 +9145,7 @@
 					<mdElement elementClass='StringProperty'>
 						<propertyID>INFO_PROPERTY</propertyID>
 						<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-						<value>40 72 40 6a 7b 56 71 79 40 3f ba 12 75 46 3f 99 18 6d ba 9c 97 16 b5 d2 20 db 18 b0 40 b7 16 f6 1c fd cd 3e 29 8a 3 57 ab 68 ce 79 d6 a3 59 60 f8 d 17 bd 48 9 0 a2 f0 7e 1a 40 d3 e3 94 9 da 52 1e b7 a1 96 fe </value>
+						<value>40 72 40 6a 7b 56 71 79 40 3f ba 12 75 46 3f 99 18 6d ba 9c 97 16 b5 d2 20 dc 19 b0 43 b6 16 f6 1c fd cd 3e 29 8a 3 57 ab 68 ce 79 d6 a3 59 60 f8 d 17 bd 48 9 0 a2 f0 7e 1a 40 d3 e3 94 9 da 52 1e b7 a1 96 fe </value>
 						<multiline xmi:value='false'/>
 					</mdElement>
 					<mdElement elementClass='LIST_PROPERTY'>
@@ -16248,7 +16248,7 @@
 	<MagicDraw_Profile:DiagramInfo xmi:id='_12_5_6a60191_1183387121884_647889_4650' base_Diagram='_12_5_6a60191_1183387121884_938732_4638' Author='U424971' Modification_date='02/07/07 17:01' Creation_date='02/07/07 15:38'/>
 	<MagicDraw_Profile:TODO_Owner xmi:id='_12_1_1_bd502fb_1178720219671_16110_515' base_Element='_11_0_34140642_1146515436546_517241_701' TODO='We need to &#39;figure out&#39; what the correct base UML type is.'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_11_0_1_bd502fb_1149627865828_825434_47' base_Diagram='_11_0_1_bd502fb_1149627865828_49887_45' Author='matthew' Modification_date='12/09/07 14:48' Creation_date='06/06/06 22:04'/>
-	<MagicDraw_Profile:DiagramInfo xmi:id='_11_0_1_34140642_1150144218260_168261_1571' base_Diagram='_11_0_1_34140642_1150144218260_194528_1569' Author='Matthew Rawlings' Modification_date='14/09/07 16:35' Creation_date='12/06/06 21:30'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_11_0_1_34140642_1150144218260_168261_1571' base_Diagram='_11_0_1_34140642_1150144218260_194528_1569' Author='Matthew Rawlings' Modification_date='14/09/07 16:44' Creation_date='12/06/06 21:30'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_12_5_6a60191_1183371529079_769798_1836' base_Diagram='_12_5_6a60191_1183371529079_547007_1824' Author='U424971' Modification_date='14/09/07 16:35' Creation_date='02/07/07 11:18'/>
 	<UNIFIVersion2004AsIntended:code xmi:id='_11_0_1_34140642_1150047150338_375831_238' base_EnumerationLiteral='_11_0_1_34140642_1150047127463_132573_237'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_11_0_1_34140642_1150145317228_82042_1923' base_Diagram='_11_0_1_34140642_1150145317228_310730_1921' Author='Matthew Rawlings' Modification_date='02/07/07 16:57' Creation_date='12/06/06 21:48'/>
