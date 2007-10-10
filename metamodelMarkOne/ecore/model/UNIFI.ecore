@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="unifi">
+  <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true" eSuperTypes="#//RepositoryItem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//RepositoryItem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryItem" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="RegistrationStatus">
+    <eLiterals name="OBSOLETE"/>
+    <eLiterals name="PROVISIONALLY_REGISTERED"/>
+    <eLiterals name="REGISTERED"/>
+  </eClassifiers>
+  <eSubpackages name="catalog">
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessArea" eSuperTypes="#//catalog/CatalogItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="model" upperBound="-1"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subDivision" upperBound="-1"
+          eType="#//catalog/BusinessArea"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="choreography" upperBound="-1"
+          eType="#//catalog/BusinessProcess"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+          eType="#//catalog/BusinessProcessDiagram" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessProcess" eSuperTypes="#//catalog/CatalogItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="conversation" upperBound="-1"
+          eType="#//catalog/BusinessTransaction"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+          eType="#//catalog/BusinessProcessDiagram"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessProcessCatalog">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subDivision" upperBound="-1"
+          eType="#//catalog/BusinessArea" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="listing" upperBound="-1"
+          eType="#//catalog/CatalogItem" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessProcessDiagram" eSuperTypes="#//Diagram"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessTransaction" eSuperTypes="#//catalog/CatalogItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="participantsRoles" upperBound="-1"
+          eType="#//dictionary/BusinessLayer/BusinessRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interaction" upperBound="-1"
+          eType="#//catalog/Interaction"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CatalogItem" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Interaction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+          eType="#//dictionary/BusinessLayer/BusinessRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" upperBound="-1"
+          eType="#//dictionary/BusinessLayer/BusinessRole"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//catalog/Message"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MarketPractice"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Message">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="definition" upperBound="-1"
+          eType="#//catalog/MessageDefinition" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="usage" lowerBound="1"
+          upperBound="-1" eType="#//catalog/MessageFunctionality"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageDefinition" eSuperTypes="#//catalog/CatalogItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageSchema" upperBound="-1"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
+          eType="#//catalog/MessageRule" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageBuildingBlock"
+          upperBound="-1" eType="#//dictionary/MessageLayer/MessageComponent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageBuildingBlock"
+          upperBound="-1" eType="#//dictionary/MessageLayer/ChoiceComponent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="marketPractice" upperBound="-1"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageDefinitionDiagram" eSuperTypes="#//Diagram"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageFlowDiagram" eSuperTypes="#//Diagram">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+          eType="#//catalog/MessageDefinition"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+          eType="#//catalog/BusinessTransaction"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageFunctionality" eSuperTypes="#//catalog/CatalogItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageRule" eSuperTypes="#//catalog/CatalogItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageSet" eSuperTypes="#//catalog/CatalogItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="definition" upperBound="-1"
+          eType="#//catalog/MessageDefinition"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SyntaxMessageScheme" eSuperTypes="#//catalog/CatalogItem"/>
+  </eSubpackages>
+  <eSubpackages name="dictionary">
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessComponentTrace">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessLayer" lowerBound="1"
+          eType="#//dictionary/BusinessLayer/BusinessComponent"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageLayer" lowerBound="1"
+          eType="#//dictionary/MessageLayer/MessageComponent"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusinessPropertyTrace">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="businessLayer" lowerBound="1"
+          eType="#//dictionary/BusinessLayer/BusinessProperty"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageLayer" lowerBound="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Code"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataDictionary">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="item" upperBound="-1"
+          eType="#//dictionary/DictionaryItem" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DictionaryItem"/>
+    <eSubpackages name="BusinessLayer">
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessActor" eSuperTypes="#//dictionary/BusinessLayer/BusinessConcept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1"
+            upperBound="-1" eType="#//dictionary/BusinessLayer/BusinessRole"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+            eType="#//catalog/BusinessProcessDiagram"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessAssociation" eSuperTypes="#//dictionary/BusinessLayer/BusinessConcept #//dictionary/BusinessLayer/BusinessProperty">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="endA" lowerBound="1"
+            eType="#//dictionary/BusinessLayer/BusinessAssociation"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="endB" lowerBound="1"
+            eType="#//dictionary/BusinessLayer/BusinessAssociation"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessComponent" eSuperTypes="#//dictionary/BusinessLayer/BusinessConcept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+            upperBound="-1" eType="#//dictionary/BusinessLayer/BusinessElement"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
+            eType="#//dictionary/BusinessLayer/BusinessComponentRule" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="property" upperBound="-1"
+            eType="#//dictionary/BusinessLayer/BusinessProperty"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessComponentRule" eSuperTypes="#//dictionary/BusinessLayer/BusinessConcept"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessConcept" abstract="true"
+          eSuperTypes="#//dictionary/DictionaryItem"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessElement" eSuperTypes="#//dictionary/BusinessLayer/BusinessConcept #//dictionary/BusinessLayer/BusinessProperty">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
+            eType="#//dictionary/DataTypes/DataType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessElementType" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessInformation" abstract="true"
+          eSuperTypes="#//dictionary/BusinessLayer/BusinessConcept"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessInformationDiagram" eSuperTypes="#//Diagram">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+            eType="#//dictionary/BusinessLayer/BusinessAssociation"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+            eType="#//dictionary/BusinessLayer/BusinessComponent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+            eType="#//dictionary/BusinessLayer/BusinessElement"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessModel" eSuperTypes="#//Model #//catalog/CatalogItem">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="mainRelevantConcept"
+            eType="#//dictionary/BusinessLayer/BusinessConcept"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="mainRelevantConcept"
+            upperBound="-1" eType="#//catalog/BusinessProcess"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessProperty" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BusinessRole" eSuperTypes="#//dictionary/BusinessLayer/BusinessConcept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="depicts" upperBound="-1"
+            eType="#//catalog/BusinessProcessDiagram"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="DataTypes">
+      <eClassifiers xsi:type="ecore:EClass" name="Amount" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="DataType">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="representation" lowerBound="1"
+            eType="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="DataTypeRepresentation" abstract="true"
+          eSuperTypes="#//dictionary/DictionaryItem"/>
+      <eClassifiers xsi:type="ecore:EClass" name="DateTime" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Indicator" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Quantity" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Rate" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//dictionary/DataTypes/DataTypeRepresentation"/>
+    </eSubpackages>
+    <eSubpackages name="MessageLayer">
+      <eClassifiers xsi:type="ecore:EClass" name="ChoiceComponent" abstract="true"
+          eSuperTypes="#//dictionary/MessageLayer/MessageConcept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="choice" lowerBound="2"
+            upperBound="-1" eType="#//dictionary/MessageLayer/MessageElement"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MessageComponent" eSuperTypes="#//dictionary/MessageLayer/MessageConcept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
+            upperBound="-1" eType="#//dictionary/MessageLayer/MessageElement"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MessageComponentRule" eSuperTypes="#//dictionary/MessageLayer/MessageConcept"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MessageConcept" abstract="true"
+          eSuperTypes="#//dictionary/DictionaryItem"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MessageElement" eSuperTypes="#//dictionary/MessageLayer/MessageConcept">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
+            eType="#//dictionary/DataTypes/DataType"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="reversing">
+    <eClassifiers xsi:type="ecore:EClass" name="ConvergenceDocumentation" eSuperTypes="#//RepositoryItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IndustryMessageSet" eSuperTypes="#//RepositoryItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ISO15022MessageSet" eSuperTypes="#//reversing/IndustryMessageSet"/>
+  </eSubpackages>
+</ecore:EPackage>
