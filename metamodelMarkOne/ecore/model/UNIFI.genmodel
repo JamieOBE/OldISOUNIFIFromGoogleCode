@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/repository/src"
+    modelPluginID="repository" modelName="UNIFI" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>UNIFI.ecore</foreignModel>
+  <genPackages prefix="Unifi" disposableProviderFactory="true" ecorePackage="UNIFI.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="UNIFI.ecore#//RegistrationStatus">
+      <genEnumLiterals ecoreEnumLiteral="UNIFI.ecore#//RegistrationStatus/OBSOLETE"/>
+      <genEnumLiterals ecoreEnumLiteral="UNIFI.ecore#//RegistrationStatus/PROVISIONALLY_REGISTERED"/>
+      <genEnumLiterals ecoreEnumLiteral="UNIFI.ecore#//RegistrationStatus/REGISTERED"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="UNIFI.ecore#//Diagram"/>
+    <genClasses ecoreClass="UNIFI.ecore#//Model"/>
+    <genClasses ecoreClass="UNIFI.ecore#//Repository"/>
+    <genClasses image="false" ecoreClass="UNIFI.ecore#//RepositoryItem"/>
+    <nestedGenPackages prefix="Catalog" disposableProviderFactory="true" ecorePackage="UNIFI.ecore#//catalog">
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/BusinessArea">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessArea/model"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessArea/subDivision"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessArea/choreography"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessArea/depicts"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/BusinessProcess">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessProcess/conversation"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessProcess/depicts"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/BusinessProcessCatalog">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessProcessCatalog/subDivision"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessProcessCatalog/listing"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/BusinessProcessDiagram"/>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/BusinessTransaction">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessTransaction/participantsRoles"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/BusinessTransaction/interaction"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="UNIFI.ecore#//catalog/CatalogItem"/>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/Interaction">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/Interaction/sender"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/Interaction/receiver"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/Interaction/type"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/MarketPractice"/>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/Message">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/Message/definition"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/Message/usage"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/MessageDefinition">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageDefinition/messageSchema"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageDefinition/constraint"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageDefinition/messageBuildingBlock"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageDefinition/messageBuildingBlock.1"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageDefinition/marketPractice"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/MessageDefinitionDiagram"/>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/MessageFlowDiagram">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageFlowDiagram/depicts"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageFlowDiagram/depicts.1"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/MessageFunctionality"/>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/MessageRule"/>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/MessageSet">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//catalog/MessageSet/definition"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//catalog/SyntaxMessageScheme"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Dictionary" disposableProviderFactory="true" ecorePackage="UNIFI.ecore#//dictionary">
+      <genClasses ecoreClass="UNIFI.ecore#//dictionary/BusinessComponentTrace">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/BusinessComponentTrace/businessLayer"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/BusinessComponentTrace/messageLayer"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//dictionary/BusinessPropertyTrace">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/BusinessPropertyTrace/businessLayer"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/BusinessPropertyTrace/messageLayer"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//dictionary/Code"/>
+      <genClasses ecoreClass="UNIFI.ecore#//dictionary/DataDictionary">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/DataDictionary/item"/>
+      </genClasses>
+      <genClasses ecoreClass="UNIFI.ecore#//dictionary/DictionaryItem"/>
+      <nestedGenPackages prefix="BusinessLayer" disposableProviderFactory="true" ecorePackage="UNIFI.ecore#//dictionary/businessLayer">
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessActor">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessActor/role"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessActor/depicts"/>
+        </genClasses>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessAssociation">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessAssociation/endA"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessAssociation/endB"/>
+        </genClasses>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessComponent">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessComponent/element"/>
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessComponent/constraint"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessComponent/property"/>
+        </genClasses>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessComponentRule"/>
+        <genClasses image="false" ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessConcept"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessElement">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessElement/type"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessElementType"/>
+        <genClasses image="false" ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessInformation"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessInformationDiagram">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessInformationDiagram/depicts"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessInformationDiagram/depicts.1"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessInformationDiagram/depicts.2"/>
+        </genClasses>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessModel">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessModel/mainRelevantConcept"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessModel/mainRelevantConcept.1"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessProperty"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/businessLayer/BusinessRole">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/businessLayer/BusinessRole/depicts"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="DataTypes" disposableProviderFactory="true" ecorePackage="UNIFI.ecore#//dictionary/dataTypes">
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/Amount"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/Code"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/DataType">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/dataTypes/DataType/representation"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="UNIFI.ecore#//dictionary/dataTypes/DataTypeRepresentation"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/DateTime"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/Identifier"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/Indicator"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/Quantity"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/Rate"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/dataTypes/Text"/>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="MessageLayer" disposableProviderFactory="true" ecorePackage="UNIFI.ecore#//dictionary/messageLayer">
+        <genClasses image="false" ecoreClass="UNIFI.ecore#//dictionary/messageLayer/ChoiceComponent">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/messageLayer/ChoiceComponent/choice"/>
+        </genClasses>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/messageLayer/MessageComponent">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/messageLayer/MessageComponent/constraint"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/messageLayer/MessageComponent/element"/>
+        </genClasses>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/messageLayer/MessageComponentRule"/>
+        <genClasses image="false" ecoreClass="UNIFI.ecore#//dictionary/messageLayer/MessageConcept"/>
+        <genClasses ecoreClass="UNIFI.ecore#//dictionary/messageLayer/MessageElement">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference UNIFI.ecore#//dictionary/messageLayer/MessageElement/type"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Reversing" disposableProviderFactory="true" ecorePackage="UNIFI.ecore#//reversing">
+      <genClasses ecoreClass="UNIFI.ecore#//reversing/ConvergenceDocumentation"/>
+      <genClasses ecoreClass="UNIFI.ecore#//reversing/IndustryMessageSet"/>
+      <genClasses ecoreClass="UNIFI.ecore#//reversing/ISO15022MessageSet"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
