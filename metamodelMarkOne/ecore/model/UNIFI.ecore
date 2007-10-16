@@ -5,12 +5,20 @@
     nsURI="http://www.isounifi.org" nsPrefix="unifi">
   <eClassifiers xsi:type="ecore:EClass" name="Diagram" abstract="true" eSuperTypes="#//RepositoryItem"/>
   <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//RepositoryItem"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Repository"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RepositoryItem" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Repository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dictionary" eType="#//dictionary/DataDictionary"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="catalog" eType="#//catalog/BusinessProcessCatalog"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" eType="#//RepositoryItem"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryItem" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RegistrationStatus">
-    <eLiterals name="OBSOLETE"/>
+    <eLiterals name="OBSOLETE" value="2"/>
     <eLiterals name="PROVISIONALLY_REGISTERED"/>
-    <eLiterals name="REGISTERED"/>
+    <eLiterals name="REGISTERED" value="1"/>
   </eClassifiers>
   <eSubpackages name="catalog" nsURI="http://www.isounifi.org/catalog" nsPrefix="catalog">
     <eClassifiers xsi:type="ecore:EClass" name="BusinessArea" eSuperTypes="#//catalog/CatalogItem">
@@ -42,21 +50,23 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="interaction" upperBound="-1"
           eType="#//catalog/Interaction"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CatalogItem" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CatalogItem" abstract="true" eSuperTypes="#//RepositoryItem">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definition" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="example" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="registration" lowerBound="1"
+          eType="#//RegistrationStatus"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="removal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Interaction">
       <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
           eType="#//dictionary/businessLayer/BusinessRole"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" upperBound="-1"
           eType="#//dictionary/businessLayer/BusinessRole"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//catalog/Message"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//catalog/MessageDefinition"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MarketPractice"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Message">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="definition" upperBound="-1"
-          eType="#//catalog/MessageDefinition" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="usage" lowerBound="1"
-          upperBound="-1" eType="#//catalog/MessageFunctionality"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MessageDefinition" eSuperTypes="#//catalog/CatalogItem">
       <eStructuralFeatures xsi:type="ecore:EReference" name="messageSchema" upperBound="-1"
           eType="#//catalog/SyntaxMessageScheme" containment="true"/>
@@ -66,6 +76,8 @@
           upperBound="-1" eType="#//dictionary/messageLayer/MessageComponent"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="marketPractice" upperBound="-1"
           eType="#//catalog/MarketPractice" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="usage" lowerBound="1"
+          upperBound="-1" eType="#//catalog/MessageFunctionality"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MessageDefinitionDiagram" eSuperTypes="#//Diagram"/>
     <eClassifiers xsi:type="ecore:EClass" name="MessageFlowDiagram" eSuperTypes="#//Diagram">
@@ -77,30 +89,39 @@
     <eClassifiers xsi:type="ecore:EClass" name="MessageFunctionality" eSuperTypes="#//catalog/CatalogItem"/>
     <eClassifiers xsi:type="ecore:EClass" name="MessageRule" eSuperTypes="#//catalog/CatalogItem"/>
     <eClassifiers xsi:type="ecore:EClass" name="MessageSet" eSuperTypes="#//catalog/CatalogItem">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="definition" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="description" upperBound="-1"
           eType="#//catalog/MessageDefinition"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SyntaxMessageScheme" eSuperTypes="#//catalog/CatalogItem"/>
   </eSubpackages>
   <eSubpackages name="dictionary" nsURI="http://www.isounifi.org/dictionary" nsPrefix="dictionary">
-    <eClassifiers xsi:type="ecore:EClass" name="BusinessComponentTrace">
+    <eClassifiers xsi:type="ecore:EClass" name="ComponentTrace">
       <eStructuralFeatures xsi:type="ecore:EReference" name="businessLayer" lowerBound="1"
           eType="#//dictionary/businessLayer/BusinessComponent"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="messageLayer" lowerBound="1"
           eType="#//dictionary/messageLayer/MessageComponent"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="BusinessPropertyTrace">
+    <eClassifiers xsi:type="ecore:EClass" name="PropertyTrace">
       <eStructuralFeatures xsi:type="ecore:EReference" name="businessLayer" lowerBound="1"
           eType="#//dictionary/businessLayer/BusinessProperty"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="messageLayer" lowerBound="1"
           eType="#//dictionary/messageLayer/MessageElement"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Code"/>
     <eClassifiers xsi:type="ecore:EClass" name="DataDictionary">
       <eStructuralFeatures xsi:type="ecore:EReference" name="item" upperBound="-1"
           eType="#//dictionary/DictionaryItem" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DictionaryItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DictionaryItem" abstract="true" eSuperTypes="#//RepositoryItem">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="definition" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="example" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="registration" lowerBound="1"
+          eType="#//RegistrationStatus"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="removalDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="synonym" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
     <eSubpackages name="businessLayer" nsURI="http://www.isounifi.org/dictionary/businessLayer"
         nsPrefix="businessLayer">
       <eClassifiers xsi:type="ecore:EClass" name="BusinessActor" eSuperTypes="#//dictionary/businessLayer/BusinessConcept">
@@ -111,9 +132,9 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="BusinessAssociation" eSuperTypes="#//dictionary/businessLayer/BusinessConcept #//dictionary/businessLayer/BusinessProperty">
         <eStructuralFeatures xsi:type="ecore:EReference" name="endA" lowerBound="1"
-            eType="#//dictionary/businessLayer/BusinessAssociation"/>
+            eType="#//dictionary/businessLayer/BusinessComponent"/>
         <eStructuralFeatures xsi:type="ecore:EReference" name="endB" lowerBound="1"
-            eType="#//dictionary/businessLayer/BusinessAssociation"/>
+            eType="#//dictionary/businessLayer/BusinessComponent"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="BusinessComponent" eSuperTypes="#//dictionary/businessLayer/BusinessConcept">
         <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="1"
@@ -157,12 +178,11 @@
         nsPrefix="dataTypes">
       <eClassifiers xsi:type="ecore:EClass" name="Amount" eSuperTypes="#//dictionary/dataTypes/DataTypeRepresentation"/>
       <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//dictionary/dataTypes/DataTypeRepresentation"/>
-      <eClassifiers xsi:type="ecore:EClass" name="DataType">
+      <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//dictionary/DictionaryItem">
         <eStructuralFeatures xsi:type="ecore:EReference" name="representation" lowerBound="1"
-            eType="#//dictionary/dataTypes/DataTypeRepresentation"/>
+            eType="#//dictionary/dataTypes/DataTypeRepresentation" containment="true"/>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="DataTypeRepresentation" abstract="true"
-          eSuperTypes="#//dictionary/DictionaryItem"/>
+      <eClassifiers xsi:type="ecore:EClass" name="DataTypeRepresentation" abstract="true"/>
       <eClassifiers xsi:type="ecore:EClass" name="DateTime" eSuperTypes="#//dictionary/dataTypes/DataTypeRepresentation"/>
       <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="#//dictionary/dataTypes/DataTypeRepresentation"/>
       <eClassifiers xsi:type="ecore:EClass" name="Indicator" eSuperTypes="#//dictionary/dataTypes/DataTypeRepresentation"/>
