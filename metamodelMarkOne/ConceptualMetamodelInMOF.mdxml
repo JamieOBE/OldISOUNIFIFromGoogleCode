@@ -1380,9 +1380,16 @@
 					</ownedAttribute>
 				</ownedMember>
 				<ownedMember xmi:type='uml:Class' xmi:id='_12_5_1_34140642_1189783719250_99920_1521' name='BusinessProcessCatalog' visibility='public'>
+					<xmi:Extension extender='MagicDraw UML 14.0' extenderID='MagicDraw UML 14.0'>
+						<modelExtension/>
+					</xmi:Extension>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_12_5_1_6a60191_1190126128640_308011_4691' body='ISO20022:1 Section 3.12&#10;Business Process Catalogue - part of the ISO 20022 Repository that contains all Business Process and Business Transaction related items&#10;&#10;NOTE It contains related items from the Business Area down to the Message Definitions and their physical implementation.'>
 						<annotatedElement xmi:idref='_12_5_1_34140642_1189783719250_99920_1521'/>
 					</ownedComment>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_14_0_34140642_1193164956484_458041_3047' name='singleton' visibility='public'>
+						<constrainedElement xmi:idref='_12_5_1_34140642_1189783719250_99920_1521'/>
+						<specification xmi:type='uml:OpaqueExpression' xmi:id='_14_0_34140642_1193165013546_467257_3048' visibility='public' body='BusinessProcessCatalog.allInstances-&gt;size() &lt;= 1' language='OCL2.0'/>
+					</ownedRule>
 					<ownedAttribute xmi:type='uml:Property' xmi:id='_12_5_1_34140642_1189785488093_451854_2075' name='listing' visibility='public' aggregation='composite' type='_12_5_1_34140642_1189783768218_874426_1537' association='_12_5_1_34140642_1189785488093_338725_2074'>
 						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_12_5_1_34140642_1189785513546_203389_2131' visibility='public' value='-1'/>
 						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_12_5_1_34140642_1189785513546_497916_2130' visibility='public'/>
@@ -2145,9 +2152,16 @@
 				</ownedMember>
 				<ownedMember xmi:type='uml:Class' xmi:id='_12_5_1_34140642_1189782849281_311154_943' name='Code' visibility='public'/>
 				<ownedMember xmi:type='uml:Class' xmi:id='_12_5_1_34140642_1189782858187_600583_966' name='DataDictionary' visibility='public'>
+					<xmi:Extension extender='MagicDraw UML 14.0' extenderID='MagicDraw UML 14.0'>
+						<modelExtension/>
+					</xmi:Extension>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_12_5_1_6a60191_1190130095718_695380_5260' body='ISO20022:1 Section 3.18&#10;&#10;Data Dictionary - part of the ISO 20022 Repository that contains all items that can be re-used during business process modelling and message definition activities&#10;&#10;NOTE The Data Dictionary therefore contains Business Concepts, Message Concepts and Data Types.'>
 						<annotatedElement xmi:idref='_12_5_1_34140642_1189782858187_600583_966'/>
 					</ownedComment>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_14_0_34140642_1193165132718_217963_3051' name='singleton' visibility='public'>
+						<constrainedElement xmi:idref='_12_5_1_34140642_1189782858187_600583_966'/>
+						<specification xmi:type='uml:OpaqueExpression' xmi:id='_14_0_34140642_1193165145406_716031_3052' visibility='public' body='BusinessProcessCatalog.allInstances-&gt;size() &lt;= 1' language='OCL2.0'/>
+					</ownedRule>
 					<ownedAttribute xmi:type='uml:Property' xmi:id='_12_5_1_6a60191_1190122125328_8802_1882' name='item' visibility='public' type='_12_5_1_34140642_1189782873359_327336_989' association='_12_5_1_6a60191_1190122125328_689527_1880'>
 						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_12_5_1_6a60191_1190122192531_641276_1933' visibility='public' value='-1'/>
 						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_12_5_1_6a60191_1190122192531_477101_1932' visibility='public'/>
@@ -2264,9 +2278,16 @@
 				</ownedAttribute>
 			</ownedMember>
 			<ownedMember xmi:type='uml:Class' xmi:id='_12_5_1_34140642_1189781146218_271906_438' name='Repository' visibility='public'>
+				<xmi:Extension extender='MagicDraw UML 14.0' extenderID='MagicDraw UML 14.0'>
+					<modelExtension/>
+				</xmi:Extension>
 				<ownedComment xmi:type='uml:Comment' xmi:id='_12_5_1_6a60191_1190130721890_257491_5434' body='ISO20022:1 Section 3.25&#10;&#10;ISO 20022 Repository - repository composed of the Data Dictionary and of the Business Process Catalogue&#10;&#10;NOTE The ISO 20022 Repository is NOT identical to the ISO 15022-1 Data Field Dictionary and Catalogue of Messages. As explained in Clause 8, all information that is contained in the ISO 15022-1 and ISO 15022-2 Data Field Dictionary and Catalogue of Messages will be transferred to the ISO 20022 Repository.'>
 					<annotatedElement xmi:idref='_12_5_1_34140642_1189781146218_271906_438'/>
 				</ownedComment>
+				<ownedRule xmi:type='uml:Constraint' xmi:id='_14_0_34140642_1193165100125_527134_3049' name='singleton' visibility='public'>
+					<constrainedElement xmi:idref='_12_5_1_34140642_1189781146218_271906_438'/>
+					<specification xmi:type='uml:OpaqueExpression' xmi:id='_14_0_34140642_1193165121109_956891_3050' visibility='public' body='Repository.allInstances-&gt;size() &lt;= 1' language='OCL2.0'/>
+				</ownedRule>
 				<ownedAttribute xmi:type='uml:Property' xmi:id='_12_5_1_34140642_1189781921218_995426_560' name='content' visibility='public' aggregation='composite' type='_12_5_1_34140642_1189781087953_392292_418' association='_12_5_1_34140642_1189781921218_136057_559'>
 					<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_12_5_1_34140642_1189781953468_348675_610' visibility='public' value='-1'/>
 					<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_12_5_1_34140642_1189781953468_825477_609' visibility='public'/>
@@ -3842,40 +3863,40 @@
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_12_5_1_34140642_1189790458437_903462_4602'>
 							<elementID xmi:idref='_12_5_1_34140642_1189783719250_99920_1521'/>
-							<geometry>211, 36, 197, 56</geometry>
+							<geometry>211, 36, 197, 72</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_12_5_1_34140642_1189790477000_914859_4681'>
 							<elementID xmi:idref='_12_5_1_34140642_1189790476984_84449_4676'/>
 							<linkFirstEndID xmi:idref='_12_5_1_34140642_1189790450109_852892_4584'/>
 							<linkSecondEndID xmi:idref='_12_5_1_34140642_1189790458437_903462_4602'/>
-							<geometry>281, 176; 281, 92; </geometry>
+							<geometry>281, 176; 281, 108; </geometry>
 							<linkNameID xmi:idref='_12_5_1_34140642_1189790477000_945943_4723'/>
 							<nameVisible xmi:value='true'/>
 							<mdOwnedViews>
 								<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_430226_4682'>
 									<editable xmi:value='false'/>
 									<visible xmi:value='false'/>
-									<geometry>268, 108, 26, 13</geometry>
+									<geometry>268, 120, 26, 13</geometry>
 								</mdElement>
 								<mdElement elementClass='TextBoxWithIcon' xmi:id='_12_5_1_34140642_1189790477000_874323_4684'>
 									<editable xmi:value='false'/>
 									<visible xmi:value='false'/>
-									<geometry>268, 147, 26, 13</geometry>
+									<geometry>268, 151, 26, 13</geometry>
 								</mdElement>
 								<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_140868_4687'>
 									<editable xmi:value='false'/>
 									<visible xmi:value='false'/>
-									<geometry>268, 150, 26, 13</geometry>
+									<geometry>268, 154, 26, 13</geometry>
 								</mdElement>
 								<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_581853_4689'>
 									<editable xmi:value='false'/>
 									<visible xmi:value='false'/>
-									<geometry>268, 143, 26, 13</geometry>
+									<geometry>268, 148, 26, 13</geometry>
 								</mdElement>
 								<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_685513_4691'>
 									<editable xmi:value='false'/>
 									<visible xmi:value='false'/>
-									<geometry>268, 92, 26, 13</geometry>
+									<geometry>268, 107, 26, 13</geometry>
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_12_5_1_34140642_1189790476984_871178_4680'>
 									<elementID xmi:idref='_12_5_1_34140642_1189790476984_963426_4677'/>
@@ -3917,33 +3938,33 @@
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_12_5_1_34140642_1189790476984_672384_4679'>
 									<elementID xmi:idref='_12_5_1_34140642_1189790476984_611451_4678'/>
-									<geometry>276, 92, 10, 10</geometry>
+									<geometry>276, 108, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_981011_4708'>
-											<geometry>264, 109, 47, 13</geometry>
+											<geometry>264, 125, 47, 13</geometry>
 											<text>+catalog</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_360245_4710'>
-											<geometry>264, 92, 26, 13</geometry>
+											<geometry>264, 108, 26, 13</geometry>
 											<text>1</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_322996_4712'>
 											<visible xmi:value='false'/>
-											<geometry>276, 92, 26, 13</geometry>
+											<geometry>276, 108, 26, 13</geometry>
 										</mdElement>
 										<mdElement elementClass='TextBoxWithIcon' xmi:id='_12_5_1_34140642_1189790477000_73657_4714'>
 											<editable xmi:value='false'/>
 											<visible xmi:value='false'/>
-											<geometry>276, 109, 26, 13</geometry>
+											<geometry>276, 125, 26, 13</geometry>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_471897_4717'>
 											<visible xmi:value='false'/>
-											<geometry>276, 92, 26, 13</geometry>
+											<geometry>276, 108, 26, 13</geometry>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_12_5_1_34140642_1189790477000_385427_4719'>
 											<editable xmi:value='false'/>
 											<visible xmi:value='false'/>
-											<geometry>276, 92, 26, 13</geometry>
+											<geometry>276, 108, 26, 13</geometry>
 										</mdElement>
 									</mdOwnedViews>
 									<roleNameID xmi:idref='_12_5_1_34140642_1189790477000_981011_4708'/>
@@ -3955,7 +3976,7 @@
 								</mdElement>
 								<mdElement elementClass='AssociationTextBox' xmi:id='_12_5_1_34140642_1189790477000_945943_4723'>
 									<visible xmi:value='false'/>
-									<geometry>262, 121, 39, 13</geometry>
+									<geometry>262, 130, 39, 13</geometry>
 									<reverseIcon xmi:value='true'/>
 								</mdElement>
 							</mdOwnedViews>
@@ -9034,7 +9055,7 @@
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_12_5_1_34140642_1189785118750_116218_1766'>
 							<elementID xmi:idref='_12_5_1_34140642_1189783719250_99920_1521'/>
-							<geometry>609, 182, 197, 56</geometry>
+							<geometry>609, 182, 197, 72</geometry>
 						</mdElement>
 						<mdElement elementClass='Generalization' xmi:id='_12_5_1_34140642_1189785319500_616926_1828'>
 							<elementID xmi:idref='_12_5_1_34140642_1189785319500_914353_1827'/>
@@ -14269,7 +14290,7 @@
 					<mdElement elementClass='StringProperty'>
 						<propertyID>INFO_PROPERTY</propertyID>
 						<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-						<value>2c 21 53 30 29 6f 32 56 2 6b f4 60 8c 23 d1 4d 1c 22 e4 87 39 1b 1a a0 91 7e 68 bd 7c 88 22 91 fb e7 63 77 28 ff 78 e4 4a ed 1a 79 ea f8 6f 8a ed 1c de 7c cf c9 e0 8c c8 f7 5f 1c a2 f9 68 a3 83 f9 6c cc 15 c7 4d </value>
+						<value>2c 21 53 30 29 6f 32 56 2 6b f4 60 8c 23 d1 4d 1c 22 e4 87 39 1b 1a a0 91 79 6b bd 7d 89 22 91 fb e7 63 77 28 ff 78 e4 4a ed 1a 79 ea f8 6f 8a ed 1c de 7c cf c9 e0 8c c8 f7 5f 1c a2 f9 68 a3 83 f9 6c cc 15 c7 4d </value>
 						<multiline xmi:value='false'/>
 					</mdElement>
 					<mdElement elementClass='LIST_PROPERTY'>
@@ -20760,7 +20781,6 @@
 	<MOF_Profile:reference xmi:id='_10_0EAPbeta2_be00301_1123771734841_390795_315' base_Property='S.161.2320.00.86' org_omg_uml2mof_referencedEnd='type'/>
 	<MOF_Profile:org_omg_uml2mof_constantValue xmi:id='_10_0EAPbeta2_be00301_1123771735222_461294_369' base_Element='f720368_1055768684834_728981_41' org_omg_uml2mof_constantValue='specialization'/>
 	<MOF_Profile:org_omg_uml2mof_constantValue xmi:id='_10_0EAPbeta2_be00301_1123771735262_547206_379' base_Element='f720368_1055768687748_383523_45' org_omg_uml2mof_constantValue='tagged elements'/>
-	<MOF_Profile:org_omg_uml2mof_isSingleton xmi:id='_14_0_78601b1_1192825425827_303041_3879' base_Element='_12_5_1_34140642_1189783719250_99920_1521'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_14_0_34140642_1193163303406_94001_2513' base_Diagram='_14_0_34140642_1193163303406_646969_2501' Creation_date='23/10/07 19:15' Modification_date='23/10/07 19:15' Author='Matthew Rawlings'/>
 	<MOF_Profile:org_omg_uml2mof_constantValue xmi:id='_10_0EAPbeta2_be00301_1123771735242_352572_372' base_Element='f720368_1055768688990_516288_47' org_omg_uml2mof_constantValue='all'/>
 	<MOF_Profile:org_omg_uml2mof_isDerived xmi:id='_10_0EAPbeta2_be00301_1123771735282_740332_383' base_Element='S.161.2320.00.5' org_omg_uml2mof_isDerived='false'/>
