@@ -2811,6 +2811,16 @@
 					<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_14_0_78601b1_1192820036692_789534_3091' name='' visibility='public' value='1'/>
 					<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_14_0_78601b1_1192820036692_708629_3090' name='' visibility='public' value='1'/>
 				</ownedAttribute>
+				<ownedAttribute xmi:type='uml:Property' xmi:id='_14_0_6a60191_1200586677533_727385_1214' name='isOrdered' visibility='public' isOrdered='false' isUnique='true' isLeaf='false' isStatic='false' isReadOnly='false' isDerived='false' isDerivedUnion='false' aggregation='none' type='S.161.2320.01.38'>
+					<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_14_0_6a60191_1200586691752_721617_1216' name='' visibility='public' value='1'/>
+					<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_14_0_6a60191_1200586691752_490044_1215' name='' visibility='public' value='1'/>
+					<defaultValue xmi:type='uml:LiteralBoolean' xmi:id='_14_0_6a60191_1200586695190_804286_1217' name='' visibility='public' value='false'/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type='uml:Property' xmi:id='_14_0_6a60191_1200586714549_585834_1218' name='isUnique' visibility='public' isOrdered='false' isUnique='true' isLeaf='false' isStatic='false' isReadOnly='false' isDerived='false' isDerivedUnion='false' aggregation='none' type='S.161.2320.01.38'>
+					<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_14_0_6a60191_1200586723112_539266_1220' name='' visibility='public' value='1'/>
+					<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_14_0_6a60191_1200586723112_263823_1219' name='' visibility='public' value='1'/>
+					<defaultValue xmi:type='uml:LiteralBoolean' xmi:id='_14_0_6a60191_1200586744690_973519_1221' name='' visibility='public' value='false'/>
+				</ownedAttribute>
 			</ownedMember>
 			<ownedMember xmi:type='uml:Class' xmi:id='_14_0_6a60191_1198001710312_667952_6028' name='Synonym' visibility='public' isLeaf='false' isAbstract='false' isActive='false'>
 				<ownedAttribute xmi:type='uml:Property' xmi:id='_14_0_6a60191_1198001731203_869443_6029' name='context' visibility='public' isOrdered='false' isUnique='true' isLeaf='false' isStatic='false' isReadOnly='false' isDerived='false' isDerivedUnion='false' aggregation='none' type='S.161.2320.01.36'>
@@ -4795,7 +4805,7 @@
 								<mdElement elementClass='TextBox' xmi:id='_14_0_78601b1_1198526669609_818661_6274'>
 									<editable xmi:value='false'/>
 									<visible xmi:value='false'/>
-									<geometry>754, 344, 26, 13</geometry>
+									<geometry>754, 359, 26, 13</geometry>
 								</mdElement>
 								<mdElement elementClass='TextBox' xmi:id='_14_0_78601b1_1198526669609_307338_6276'>
 									<editable xmi:value='false'/>
@@ -4850,11 +4860,11 @@
 									<geometry>762, 282, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_78601b1_1198526669609_268859_6295'>
-											<geometry>766, 274, 60, 13</geometry>
+											<geometry>733, 282, 60, 13</geometry>
 											<text>+message</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_78601b1_1198526669609_184044_6297'>
-											<geometry>766, 291, 26, 13</geometry>
+											<geometry>733, 299, 26, 13</geometry>
 											<text>0..*</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_78601b1_1198526669609_189077_6299'>
@@ -19815,7 +19825,7 @@
 					<mdElement elementClass='StringProperty'>
 						<propertyID>INFO_PROPERTY</propertyID>
 						<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-						<value>2 52 67 40 1e 52 3a 5e 2e 10 b8 6a 87 16 b5 99 9f 8e 89 a 97 4f 9b b0 df a3 65 de 76 e0 be b9 30 1f 7b cc 4a e1 53 e9 7a c2 a9 79 de 3e 8 a9 a 40 29 8a 2a ed 18 4c 28 50 55 a1 55 bb 39 35 42 d4 db 76 cc 27 f6 </value>
+						<value>2 52 67 40 1e 52 3a 5e 2e 10 b8 6a 87 16 b5 99 9f 8e 89 a 97 4f 9b b0 df a3 6c de 75 e5 be b9 30 1f 7b cc 4a e1 53 e9 7a c2 a9 79 de 3e 8 a9 a 40 29 8a 2a ed 18 4c 28 50 55 a1 55 bb 39 35 42 d4 db 76 cc 27 f6 </value>
 						<multiline xmi:value='false'/>
 					</mdElement>
 					<mdElement elementClass='LIST_PROPERTY'>
