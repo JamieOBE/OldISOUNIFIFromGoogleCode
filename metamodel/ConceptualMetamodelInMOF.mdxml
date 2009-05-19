@@ -355,7 +355,7 @@
 							</modelExtension>
 						</xmi:Extension>
 					</ownedAttribute>
-					<ownedAttribute xmi:type='uml:Property' xmi:id='_16_5_34140642_1242752341500_827589_1059' name='generatedSyntaxes' visibility='public' type='_16_5_34140642_1242649892812_278809_1063' association='_16_5_34140642_1242752341500_101715_1058'>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_16_5_34140642_1242752341500_827589_1059' name='generatedSyntax' visibility='public' type='_16_5_34140642_1242649892812_278809_1063' association='_16_5_34140642_1242752341500_101715_1058'>
 						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_5_34140642_1242752537718_611416_1071' visibility='public' value='*'/>
 						<xmi:Extension extender='MagicDraw UML 16.5'>
 							<modelExtension>
@@ -14518,8 +14518,8 @@
 									<geometry>111, 200, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_16_5_34140642_1242752526250_412199_1068'>
-											<geometry>11, 195, 102, 12</geometry>
-											<text>+generatedSyntaxes</text>
+											<geometry>26, 196, 90, 12</geometry>
+											<text>+generatedSyntax</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_16_5_34140642_1242752537718_336797_1072'>
 											<geometry>119, 195, 24, 12</geometry>
@@ -15531,7 +15531,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>INFO_PROPERTY</propertyID>
 							<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-							<value>1a 5d 1 35 27 38 53 2a 5f 1e 50 7a 4b fd e3 eb 6a 37 a0 21 ce 56 99 a4 86 12 b3 16 9b 16 3c af 57 8a d6 fa d3 7b 12 9d 69 92 c4 a3 5 d2 6 16 59 67 e4 8e 4f 5f 56 6c 23 e eb b5 be 2c 7c d3 10 e1 ba c0 b d3 93 </value>
+							<value>1a 5d 1 35 27 38 53 2a 5f 1e 50 7a 4b fd e3 eb 6a 37 a0 21 ce 56 99 a4 86 12 b9 16 9c 16 3c af 57 8a d6 fa d3 7b 12 9d 69 92 c4 a3 5 d2 6 16 59 67 e4 8e 4f 5f 56 6c 23 e eb b5 be 2c 7c d3 10 e1 ba c0 b d3 93 </value>
 						</mdElement>
 						<mdElement elementClass='LIST_PROPERTY'>
 							<propertyID>ADDITIONAL_CONTAINMENT_TREES</propertyID>
