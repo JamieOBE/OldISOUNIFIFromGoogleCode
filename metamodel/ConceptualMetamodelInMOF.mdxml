@@ -397,9 +397,9 @@
 					</ownedEnd>
 				</packagedElement>
 				<packagedElement xmi:type='uml:GeneralizationSet' xmi:id='_14_0_6a60191_1200917796391_421863_4402' name='ComponentsInMessages' visibility='public'>
-					<generalization xmi:idref='_14_0_78601b1_1196766181500_228062_4831'/>
-					<generalization xmi:idref='_14_0_78601b1_1196766181500_876016_4830'/>
 					<generalization xmi:idref='_15_0_78601b1_1201520974694_419983_2028'/>
+					<generalization xmi:idref='_14_0_78601b1_1196766181500_876016_4830'/>
+					<generalization xmi:idref='_14_0_78601b1_1196766181500_228062_4831'/>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_15_5_56101ea_1227017642567_922805_6944' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      specifies the set of MessageComponentTypes: MessageComponent, &#10;      ExternalSchema and ChoiceComponent&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
 						<annotatedElement xmi:idref='_14_0_6a60191_1200917796391_421863_4402'/>
 					</ownedComment>
@@ -409,8 +409,8 @@
 					<client xmi:idref='_14_0_78601b1_1194297672554_131335_3911'/>
 				</packagedElement>
 				<packagedElement xmi:type='uml:GeneralizationSet' xmi:id='_15_0_6a60191_1201177328455_941555_8934' name='MessageElements' visibility='public' isCovering='true' isDisjoint='true'>
-					<generalization xmi:idref='_14_0_78601b1_1192816171766_814014_1787'/>
 					<generalization xmi:idref='_14_0_78601b1_1192816195985_527280_1831'/>
+					<generalization xmi:idref='_14_0_78601b1_1192816171766_814014_1787'/>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_15_5_56101ea_1227017754411_768093_6947' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    defines the set of the different kinds of MessageElements: &#10;    MessageAssociationEnd and MessageAttribute&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
 						<annotatedElement xmi:idref='_15_0_6a60191_1201177328455_941555_8934'/>
 					</ownedComment>
@@ -777,10 +777,10 @@
 						<annotatedElement xmi:idref='_16_0_1_56101ea_1242834849379_188795_792'/>
 					</ownedComment>
 					<ownedRule xmi:type='uml:Constraint' xmi:id='_16_5_1_56101ea_1245146073250_364185_1710' name='GeneratedForDerivation' visibility='public'>
-						<ownedComment xmi:type='uml:Comment' xmi:id='_16_5_1_56101ea_1245158372375_666177_1712' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      the syntax that is valid for a MessageSet, based on the EncodingRules &#10;      used.&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_16_5_1_56101ea_1245158372375_666177_1712' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      the syntax that is valid for a MessageSet, based on the Encoding used&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
 							<annotatedElement xmi:idref='_16_5_1_56101ea_1245146073250_364185_1710'/>
 						</ownedComment>
-						<specification xmi:type='uml:OpaqueExpression' xmi:id='_16_5_1_56101ea_1245146073250_801185_1711' visibility='public' body='generatedFor=possibleEncodings.encodes' language='OCL2.0'/>
+						<specification xmi:type='uml:OpaqueExpression' xmi:id='_16_5_1_56101ea_1245146073250_801185_1711' visibility='public' body='generatedFor=possibleEncodings.messageSet' language='OCL2.0'/>
 					</ownedRule>
 					<ownedAttribute xmi:type='uml:Property' xmi:id='_16_5_34140642_1243351275421_324755_1089' name='generatedFor' visibility='public' isDerived='true' type='_12_5_1_34140642_1189783573734_21944_1500' association='_16_5_34140642_1243351275421_373027_1087'>
 						<ownedComment xmi:type='uml:Comment' xmi:id='_16_5_34140642_1243351275421_401965_1094' body='the scheme in which a syntax is encoded'>
@@ -835,7 +835,7 @@
 					<memberEnd xmi:idref='_16_5_34140642_1243351300453_9495_1121'/>
 					<memberEnd xmi:idref='_16_5_34140642_1243351300453_509358_1122'/>
 				</packagedElement>
-				<packagedElement xmi:type='uml:Class' xmi:id='_16_5_34140642_1243351291078_780232_1098' name='EncodingRules' visibility='public'>
+				<packagedElement xmi:type='uml:Class' xmi:id='_16_5_34140642_1243351291078_780232_1098' name='Encoding' visibility='public'>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_16_5_34140642_1243353528312_593082_1954' body='a particular set of encoding rules for a MessageInstance&#10;EXAMPLE 1&#9;ASN.1 PER&#10;EXAMPLE 2&#9;ASN.1 XER&#10;EXAMPLE 3&#9;XSD XML'>
 						<annotatedElement xmi:idref='_16_5_34140642_1243351291078_780232_1098'/>
 					</ownedComment>
@@ -854,8 +854,8 @@
 							</modelExtension>
 						</xmi:Extension>
 					</ownedAttribute>
-					<ownedAttribute xmi:type='uml:Property' xmi:id='_16_5_34140642_1243353293531_200151_1911' name='encodes' visibility='public' type='_12_5_1_34140642_1189783573734_21944_1500' association='_16_5_34140642_1243353293531_527011_1908'>
-						<ownedComment xmi:type='uml:Comment' xmi:id='_16_5_34140642_1243353293531_406292_1916' body='the EncodingScheme used by this MessageSet'>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_16_5_34140642_1243353293531_200151_1911' name='messageSet' visibility='public' type='_12_5_1_34140642_1189783573734_21944_1500' association='_16_5_34140642_1243353293531_527011_1908'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_16_5_34140642_1243353293531_406292_1916' body='the MessageSets for which this Encoding is a valid ISO 20022 encoding'>
 							<annotatedElement xmi:idref='_16_5_34140642_1243353293531_200151_1911'/>
 						</ownedComment>
 						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_5_1_56101ea_1245145910796_800330_1707' visibility='public' value='*'/>
@@ -867,6 +867,20 @@
 					<memberEnd xmi:idref='_16_5_34140642_1243353293531_200151_1911'/>
 					<ownedComment xmi:type='uml:Comment' xmi:id='_16_5_34140642_1243353293531_652117_1909' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      the encodingSchemes used by a MessageSet&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
 						<annotatedElement xmi:idref='_16_5_34140642_1243353293531_527011_1908'/>
+					</ownedComment>
+				</packagedElement>
+				<packagedElement xmi:type='uml:GeneralizationSet' xmi:id='_15_0_6a60191_1201177295564_678355_8930' name='TopLevelCatalogueEntries' visibility='public' isCovering='true' isDisjoint='true'>
+					<generalization xmi:idref='_15_0_6a60191_1201188054817_994282_11493'/>
+					<generalization xmi:idref='_15_0_6a60191_1201188054817_755645_11492'/>
+					<generalization xmi:idref='_14_0_6a60191_1200913912200_810764_4368'/>
+					<generalization xmi:idref='_15_1_65b0186_1222213097609_268618_2657'/>
+					<generalization xmi:idref='_15_0_6a60191_1201189164854_590433_11906'/>
+					<generalization xmi:idref='_15_1_65b0186_1222226754318_333556_3498'/>
+					<generalization xmi:idref='_14_0_78601b1_1198522322741_394569_4804'/>
+					<generalization xmi:idref='_14_0_78601b1_1194366377000_280021_5497'/>
+					<generalization xmi:idref='_15_1_65b0186_1212682577875_788647_2093'/>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_15_5_56101ea_1227021572427_812107_6966' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      specifies the set of TopLevelCatalogueEntries that are required and &#10;      applicable in the context of Reverse Engineering: &#10;      ConvergenceDocumentation and IndustryMessageSet&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
+						<annotatedElement xmi:idref='_15_0_6a60191_1201177295564_678355_8930'/>
 					</ownedComment>
 				</packagedElement>
 			</packagedElement>
@@ -1938,20 +1952,6 @@
 					<packagedElement xmi:type='uml:Association' xmi:id='_15_0_34140642_1203022812000_191210_4997' visibility='public'>
 						<memberEnd xmi:idref='_15_0_34140642_1203022812000_885622_4998'/>
 						<memberEnd xmi:idref='_15_0_34140642_1203022812000_629630_4999'/>
-					</packagedElement>
-					<packagedElement xmi:type='uml:GeneralizationSet' xmi:id='_15_0_6a60191_1201177295564_678355_8930' name='TopLevelCatalogueEntries' visibility='public' isCovering='true' isDisjoint='true'>
-						<generalization xmi:idref='_15_0_6a60191_1201188054817_994282_11493'/>
-						<generalization xmi:idref='_15_0_6a60191_1201188054817_755645_11492'/>
-						<generalization xmi:idref='_14_0_6a60191_1200913912200_810764_4368'/>
-						<generalization xmi:idref='_15_1_65b0186_1222213097609_268618_2657'/>
-						<generalization xmi:idref='_15_0_6a60191_1201189164854_590433_11906'/>
-						<generalization xmi:idref='_15_1_65b0186_1222226754318_333556_3498'/>
-						<generalization xmi:idref='_14_0_78601b1_1198522322741_394569_4804'/>
-						<generalization xmi:idref='_14_0_78601b1_1194366377000_280021_5497'/>
-						<generalization xmi:idref='_15_1_65b0186_1212682577875_788647_2093'/>
-						<ownedComment xmi:type='uml:Comment' xmi:id='_15_5_56101ea_1227021572427_812107_6966' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;    &#10;  &lt;/head&gt;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      specifies the set of TopLevelCatalogueEntries that are required and &#10;      applicable in the context of Reverse Engineering: &#10;      ConvergenceDocumentation and IndustryMessageSet&#10;    &lt;/p&gt;&#10;  &lt;/body&gt;&#10;&lt;/html&gt;&#10;'>
-							<annotatedElement xmi:idref='_15_0_6a60191_1201177295564_678355_8930'/>
-						</ownedComment>
 					</packagedElement>
 				</packagedElement>
 			</packagedElement>
@@ -4996,13 +4996,13 @@
 					<diagramFrameInitialSizeSet xmi:value='true'/>
 					<diagramWindowBounds>3, 25, 1049, 756</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
-					<diagramScrollPositionY xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='210'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='false'/>
+					<active xmi:value='true'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramFrame' xmi:id='_12_5_1_34140642_1189788915781_639219_3509'>
 							<elementID xmi:idref='_12_5_1_34140642_1189788915781_886945_3496'/>
-							<geometry>5, 5, 971, 769</geometry>
+							<geometry>5, 5, 829, 920</geometry>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_14_0_6a60191_1194974311199_762863_3412'>
 							<elementID xmi:idref='_14_0_78601b1_1192816181328_800287_1811'/>
@@ -5014,7 +5014,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>140, 651, 143, 63</geometry>
+							<geometry>130, 802, 143, 63</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_14_0_6a60191_1194974335887_3013_4408'>
 							<elementID xmi:idref='_14_0_78601b1_1196766196074_35917_4833'/>
@@ -5027,7 +5027,7 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311370_354555_3667'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
-							<geometry>365, 455; 365, 375; </geometry>
+							<geometry>355, 606; 355, 526; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_14_0_6a60191_1194974335887_648721_4420'>
@@ -5038,14 +5038,14 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>360, 445, 10, 10</geometry>
+									<geometry>350, 596, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_632971_4423'>
-											<geometry>337, 441, 24, 12</geometry>
+											<geometry>327, 592, 24, 12</geometry>
 											<text>0..*</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_359900_4432'>
-											<geometry>371, 441, 47, 12</geometry>
+											<geometry>361, 592, 47, 12</geometry>
 											<text>{ordered}</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5054,14 +5054,14 @@
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_14_0_6a60191_1194974335887_461209_4436'>
 									<elementID xmi:idref='_14_0_78601b1_1196766196074_755450_4834'/>
-									<geometry>360, 375, 10, 10</geometry>
+									<geometry>350, 526, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_245779_4437'>
-											<geometry>371, 382, 97, 12</geometry>
+											<geometry>361, 533, 97, 12</geometry>
 											<text>+componentContext</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_540212_4439'>
-											<geometry>336, 382, 24, 12</geometry>
+											<geometry>326, 533, 24, 12</geometry>
 											<text>1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5088,7 +5088,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>231, 147, 110, 34</geometry>
+							<geometry>203, 378, 110, 34</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_14_0_6a60191_1194974335887_691508_3799'>
 							<elementID xmi:idref='_14_0_78601b1_1196766203182_761074_4840'/>
@@ -5101,19 +5101,19 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311199_762863_3412'/>
-							<geometry>265, 354; 175, 354; 175, 651; </geometry>
+							<geometry>255, 505; 165, 505; 165, 802; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_14_0_6a60191_1194974335887_993806_3811'>
 									<elementID xmi:idref='_14_0_78601b1_1196766203182_970082_4841'/>
-									<geometry>255, 349, 10, 10</geometry>
+									<geometry>245, 500, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_492692_3812'>
-											<geometry>238, 336, 28, 12</geometry>
+											<geometry>228, 487, 28, 12</geometry>
 											<text>+type</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_531229_3814'>
-											<geometry>252, 357, 24, 12</geometry>
+											<geometry>242, 508, 24, 12</geometry>
 											<text>1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5128,10 +5128,10 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>170, 641, 10, 10</geometry>
+									<geometry>160, 792, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_37377_3830'>
-											<geometry>154, 630, 24, 12</geometry>
+											<geometry>144, 781, 24, 12</geometry>
 											<text>0..*</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5151,7 +5151,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>265, 301, 252, 74</geometry>
+							<geometry>255, 452, 252, 74</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_14_0_6a60191_1194974335902_379537_4596'>
 							<elementID xmi:idref='_12_5_1_6a60191_1190131963250_496629_5991'/>
@@ -5164,7 +5164,7 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311183_255648_3394'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311230_764227_3450'/>
-							<geometry>114, 77; 357, 77; </geometry>
+							<geometry>156, 46; 228, 46; 228, 81; 371, 81; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_14_0_6a60191_1194974335902_193077_4608'>
@@ -5175,10 +5175,10 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>114, 72, 10, 10</geometry>
+									<geometry>156, 41, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335902_922378_4611'>
-											<geometry>119, 84, 24, 12</geometry>
+											<geometry>161, 28, 24, 12</geometry>
 											<text>0..*</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5192,10 +5192,10 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>347, 72, 10, 10</geometry>
+									<geometry>361, 76, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335902_614840_4627'>
-											<geometry>329, 84, 24, 12</geometry>
+											<geometry>344, 84, 24, 12</geometry>
 											<text>0..*</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5216,8 +5216,8 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
 							<linkSecondEndID xmi:idref='_15_0_78601b1_1201520962632_209053_2008'/>
-							<geometry>89, 266; 89, 219; </geometry>
-							<treeID xmi:idref='_15_0_6a60191_1201188307103_755229_11534'/>
+							<geometry>186, 436; 186, 352; </geometry>
+							<treeID xmi:idref='_16_5_1_56101ea_1245228926578_314525_1863'/>
 							<nameVisible xmi:value='false'/>
 						</mdElement>
 						<mdElement elementClass='Generalization' xmi:id='_14_0_6a60191_1194974335887_19652_4221'>
@@ -5238,8 +5238,8 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311370_545013_3685'/>
-							<geometry>322, 266; 322, 181; </geometry>
-							<treeID xmi:idref='_15_0_6a60191_1201188307103_755229_11534'/>
+							<geometry>258, 436; 258, 412; </geometry>
+							<treeID xmi:idref='_16_5_1_56101ea_1245228926578_314525_1863'/>
 							<nameVisible xmi:value='false'/>
 						</mdElement>
 						<mdElement elementClass='Generalization' xmi:id='_14_0_6a60191_1194974335887_113874_3776'>
@@ -5260,8 +5260,8 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311370_354555_3667'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311199_762863_3412'/>
-							<geometry>217, 616; 217, 651; </geometry>
-							<treeID xmi:idref='_15_0_6a60191_1201188423636_334607_11544'/>
+							<geometry>263, 739; 263, 802; </geometry>
+							<treeID xmi:idref='_16_5_1_56101ea_1245230977421_157493_1921'/>
 							<nameVisible xmi:value='false'/>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_14_0_6a60191_1194974311370_354555_3667'>
@@ -5274,7 +5274,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>238, 455, 252, 100</geometry>
+							<geometry>228, 606, 252, 100</geometry>
 						</mdElement>
 						<mdElement elementClass='Generalization' xmi:id='_14_0_6a60191_1198006223296_43494_6088'>
 							<elementID xmi:idref='_14_0_78601b1_1196766181500_876016_4830'/>
@@ -5294,8 +5294,8 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
 							<linkSecondEndID xmi:idref='_14_0_78601b1_1196765853912_126270_4726'/>
-							<geometry>89, 266; 89, 315; </geometry>
-							<treeID xmi:idref='_15_0_6a60191_1201188307103_755229_11534'/>
+							<geometry>137, 436; 137, 436; </geometry>
+							<treeID xmi:idref='_16_5_1_56101ea_1245228926578_314525_1863'/>
 							<nameVisible xmi:value='false'/>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_14_0_6a60191_1194974311230_764227_3450'>
@@ -5308,7 +5308,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>357, 56, 136, 59</geometry>
+							<geometry>371, 56, 136, 59</geometry>
 						</mdElement>
 						<mdElement elementClass='Generalization' xmi:id='_14_0_6a60191_1194974335902_394798_4690'>
 							<elementID xmi:idref='_14_0_78601b1_1192816171766_814014_1787'/>
@@ -5328,8 +5328,8 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311370_354555_3667'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311245_118762_3486'/>
-							<geometry>425, 616; 425, 665; </geometry>
-							<treeID xmi:idref='_15_0_6a60191_1201188423636_334607_11544'/>
+							<geometry>382, 739; 382, 816; </geometry>
+							<treeID xmi:idref='_16_5_1_56101ea_1245230977421_157493_1921'/>
 							<nameVisible xmi:value='false'/>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_15_0_78601b1_1201520962632_209053_2008'>
@@ -5349,7 +5349,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>21, 147, 199, 72</geometry>
+							<geometry>84, 280, 199, 72</geometry>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_14_0_78601b1_1196765853912_126270_4726'>
 							<elementID xmi:idref='_14_0_78601b1_1196765853912_70556_4725'/>
@@ -5367,7 +5367,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>28, 315, 123, 34</geometry>
+							<geometry>14, 413, 123, 34</geometry>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_14_0_6a60191_1194974311245_118762_3486'>
 							<elementID xmi:idref='_12_5_1_34140642_1189783529187_282153_1484'/>
@@ -5385,7 +5385,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>371, 665, 198, 49</geometry>
+							<geometry>361, 816, 198, 49</geometry>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_14_0_6a60191_1194974311183_255648_3394'>
 							<elementID xmi:idref='_12_5_1_34140642_1189783573734_21944_1500'/>
@@ -5403,7 +5403,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>21, 56, 93, 34</geometry>
+							<geometry>63, 28, 93, 34</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_14_0_6a60191_1194974335887_264442_4174'>
 							<elementID xmi:idref='_15_1_65b0186_1221580242551_496931_1195'/>
@@ -5416,7 +5416,7 @@
 							</properties>
 							<linkFirstEndID xmi:idref='_15_1_65b0186_1221580139823_317320_1172'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311230_764227_3450'/>
-							<geometry>424, 161; 424, 115; </geometry>
+							<geometry>389, 312; 389, 115; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_14_0_6a60191_1194974335887_356773_4186'>
@@ -5427,14 +5427,14 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>419, 151, 10, 10</geometry>
+									<geometry>384, 302, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_819875_4189'>
-											<geometry>399, 147, 24, 12</geometry>
+											<geometry>364, 298, 24, 12</geometry>
 											<text>1..*</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_655980_4198'>
-											<geometry>399, 131, 47, 12</geometry>
+											<geometry>364, 282, 47, 12</geometry>
 											<text>{ordered}</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5449,10 +5449,10 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>419, 115, 10, 10</geometry>
+									<geometry>384, 115, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_14_0_6a60191_1194974335887_783333_4205'>
-											<geometry>433, 117, 24, 12</geometry>
+											<geometry>398, 117, 24, 12</geometry>
 											<text>1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5461,64 +5461,6 @@
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_14_0_6a60191_1194974335887_356773_4186'/>
 							<associationSecondEndID xmi:idref='_14_0_6a60191_1194974335887_701429_4202'/>
-						</mdElement>
-						<mdElement elementClass='Tree' xmi:id='_15_0_6a60191_1201188307103_755229_11534'>
-							<geometry>89, 266, 233, 0</geometry>
-							<mdOwnedViews>
-								<mdElement elementClass='GeneralizationSet' xmi:id='_15_0_6a60191_1201188307103_61663_11535'>
-									<elementID xmi:idref='_14_0_6a60191_1200917796391_421863_4402'/>
-									<properties>
-										<mdElement elementClass='BooleanProperty'>
-											<propertyID>USE_FILL_COLOR</propertyID>
-											<propertyDescriptionID>USE_FILL_COLOR_DESCRIPTION</propertyDescriptionID>
-											<value xmi:value='true'/>
-										</mdElement>
-										<mdElement elementClass='BooleanProperty'>
-											<propertyID>AUTOSIZE</propertyID>
-											<propertyDescriptionID>AUTOSIZE_DESCRIPTION</propertyDescriptionID>
-											<value xmi:value='true'/>
-										</mdElement>
-									</properties>
-									<geometry>161, 273, 119, 15</geometry>
-								</mdElement>
-							</mdOwnedViews>
-							<baseShape xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
-							<verticalBarX xmi:value='19'/>
-							<verticalBarY xmi:value='301'/>
-							<horizontalBarLeft xmi:value='89'/>
-							<horizontalBarRight xmi:value='322'/>
-							<horizontalBarY xmi:value='266'/>
-							<implicitlySetY xmi:value='true'/>
-							<linkGeneralizationSetID xmi:idref='_15_0_6a60191_1201188307103_61663_11535'/>
-						</mdElement>
-						<mdElement elementClass='Tree' xmi:id='_15_0_6a60191_1201188423636_334607_11544'>
-							<geometry>217, 616, 208, 0</geometry>
-							<mdOwnedViews>
-								<mdElement elementClass='GeneralizationSet' xmi:id='_15_0_6a60191_1201188423636_150255_11545'>
-									<elementID xmi:idref='_15_0_6a60191_1201177328455_941555_8934'/>
-									<properties>
-										<mdElement elementClass='BooleanProperty'>
-											<propertyID>USE_FILL_COLOR</propertyID>
-											<propertyDescriptionID>USE_FILL_COLOR_DESCRIPTION</propertyDescriptionID>
-											<value xmi:value='true'/>
-										</mdElement>
-										<mdElement elementClass='BooleanProperty'>
-											<propertyID>AUTOSIZE</propertyID>
-											<propertyDescriptionID>AUTOSIZE_DESCRIPTION</propertyDescriptionID>
-											<value xmi:value='true'/>
-										</mdElement>
-									</properties>
-									<geometry>273, 595, 88, 15</geometry>
-								</mdElement>
-							</mdOwnedViews>
-							<baseShape xmi:idref='_14_0_6a60191_1194974311370_354555_3667'/>
-							<verticalBarX xmi:value='128'/>
-							<verticalBarY xmi:value='555'/>
-							<horizontalBarLeft xmi:value='217'/>
-							<horizontalBarRight xmi:value='425'/>
-							<horizontalBarY xmi:value='616'/>
-							<implicitlySetY xmi:value='true'/>
-							<linkGeneralizationSetID xmi:idref='_15_0_6a60191_1201188423636_150255_11545'/>
 						</mdElement>
 						<mdElement elementClass='Class' xmi:id='_15_1_65b0186_1213134107174_696534_1622'>
 							<elementID xmi:idref='_15_1_65b0186_1212681588937_514322_1995'/>
@@ -5545,13 +5487,13 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>546, 42, 410, 98</geometry>
+							<geometry>399, 182, 410, 98</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_15_1_65b0186_1213134123883_800346_1641'>
 							<elementID xmi:idref='_15_1_65b0186_1212682083671_454665_2038'/>
 							<linkFirstEndID xmi:idref='_15_1_65b0186_1213134107174_696534_1622'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311230_764227_3450'/>
-							<geometry>546, 67; 493, 67; </geometry>
+							<geometry>480, 182; 480, 115; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_15_1_65b0186_1213134123883_341328_1653'>
@@ -5562,10 +5504,10 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>536, 62, 10, 10</geometry>
+									<geometry>475, 172, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_1_65b0186_1213134123883_749447_1656'>
-											<geometry>525, 57, 24, 12</geometry>
+											<geometry>483, 167, 24, 12</geometry>
 											<text>1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5579,10 +5521,10 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>493, 62, 10, 10</geometry>
+									<geometry>475, 115, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_1_65b0186_1213134123883_174306_1672'>
-											<geometry>497, 71, 24, 12</geometry>
+											<geometry>483, 130, 24, 12</geometry>
 											<text>1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5609,25 +5551,25 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>350, 161, 220, 74</geometry>
+							<geometry>340, 312, 220, 74</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_15_1_65b0186_1221580315327_731731_1210'>
 							<elementID xmi:idref='_15_1_65b0186_1221580315311_363851_1205'/>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
 							<linkSecondEndID xmi:idref='_15_1_65b0186_1221580139823_317320_1172'/>
-							<geometry>424, 301; 424, 235; </geometry>
+							<geometry>414, 452; 414, 386; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_15_1_65b0186_1221580315311_662939_1209'>
 									<elementID xmi:idref='_15_1_65b0186_1221580315311_976707_1206'/>
-									<geometry>419, 291, 10, 10</geometry>
+									<geometry>409, 442, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_1_65b0186_1221580315327_328636_1222'>
-											<geometry>427, 287, 71, 12</geometry>
+											<geometry>417, 438, 71, 12</geometry>
 											<text>+complexType</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_15_1_65b0186_1221580315327_809823_1224'>
-											<geometry>406, 287, 24, 12</geometry>
+											<geometry>396, 438, 24, 12</geometry>
 											<text>0..1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5636,14 +5578,14 @@
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_15_1_65b0186_1221580315311_433482_1208'>
 									<elementID xmi:idref='_15_1_65b0186_1221580315311_619643_1207'/>
-									<geometry>419, 235, 10, 10</geometry>
+									<geometry>409, 386, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_1_65b0186_1221580315327_309014_1237'>
-											<geometry>425, 237, 114, 12</geometry>
+											<geometry>415, 388, 114, 12</geometry>
 											<text>+messageBuildingBlock</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_15_1_65b0186_1221580315327_301443_1239'>
-											<geometry>406, 237, 24, 12</geometry>
+											<geometry>396, 388, 24, 12</geometry>
 											<text>0..*</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5675,13 +5617,13 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>238, 5, 108, 59</geometry>
+							<geometry>238, 5, 108, 56</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_15_1_65b0186_1222212441146_720759_2278'>
 							<elementID xmi:idref='_15_1_65b0186_1222212441146_682531_2273'/>
 							<linkFirstEndID xmi:idref='_15_1_65b0186_1222212314770_532165_2178'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311230_764227_3450'/>
-							<geometry>346, 25; 423, 25; 423, 56; </geometry>
+							<geometry>346, 25; 437, 25; 437, 56; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_15_1_65b0186_1222212441146_856111_2277'>
@@ -5708,10 +5650,10 @@
 											<propertyDescriptionID>SHOW_ROLE_NAME_DESCRIPTION</propertyDescriptionID>
 										</mdElement>
 									</properties>
-									<geometry>418, 46, 10, 10</geometry>
+									<geometry>432, 46, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_1_65b0186_1222212441146_215655_2307'>
-											<geometry>398, 42, 24, 12</geometry>
+											<geometry>412, 42, 24, 12</geometry>
 											<text>0..*</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5725,19 +5667,19 @@
 							<elementID xmi:idref='_15_5_56101ea_1225799633296_620588_7477'/>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311245_118762_3486'/>
-							<geometry>515, 375; 515, 665; </geometry>
+							<geometry>505, 526; 505, 816; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_15_5_56101ea_1225799050375_535325_7255'>
 									<elementID xmi:idref='_15_5_56101ea_1225799633296_271663_7479'/>
-									<geometry>510, 375, 10, 10</geometry>
+									<geometry>500, 526, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225799050375_405475_7268'>
-											<geometry>518, 382, 74, 12</geometry>
+											<geometry>508, 533, 74, 12</geometry>
 											<text>+ complexType</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225799050390_462212_7270'>
-											<geometry>483, 389, 24, 12</geometry>
+											<geometry>473, 540, 24, 12</geometry>
 											<text>0..1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5746,14 +5688,14 @@
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_15_5_56101ea_1225799050375_558230_7254'>
 									<elementID xmi:idref='_15_5_56101ea_1225799633296_838311_7478'/>
-									<geometry>510, 655, 10, 10</geometry>
+									<geometry>500, 806, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225799050390_824805_7285'>
-											<geometry>518, 651, 24, 12</geometry>
+											<geometry>508, 802, 24, 12</geometry>
 											<text>*</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_16_5_34140642_1243343390687_263560_1132'>
-											<geometry>420, 644, 92, 12</geometry>
+											<geometry>410, 795, 92, 12</geometry>
 											<text>+messageAttribute</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5768,19 +5710,19 @@
 							<elementID xmi:idref='_15_5_56101ea_1226074118234_205868_9710'/>
 							<linkFirstEndID xmi:idref='_15_5_56101ea_1226074111296_645888_9691'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311245_118762_3486'/>
-							<geometry>623, 475; 569, 475; 569, 665; </geometry>
+							<geometry>613, 626; 559, 626; 559, 816; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_15_5_56101ea_1225799144609_988906_7312'>
 									<elementID xmi:idref='_15_5_56101ea_1226074118234_555427_9712'/>
-									<geometry>613, 470, 10, 10</geometry>
+									<geometry>603, 621, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225799144625_900207_7325'>
-											<geometry>628, 485, 61, 12</geometry>
+											<geometry>618, 636, 61, 12</geometry>
 											<text>+simpleType</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225799144625_212490_7327'>
-											<geometry>597, 479, 24, 12</geometry>
+											<geometry>587, 630, 24, 12</geometry>
 											<text>0..1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5789,14 +5731,14 @@
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_15_5_56101ea_1225799144609_738225_7311'>
 									<elementID xmi:idref='_15_5_56101ea_1226074118234_65962_9711'/>
-									<geometry>569, 660, 10, 10</geometry>
+									<geometry>559, 811, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225799144625_109444_7342'>
-											<geometry>558, 660, 24, 12</geometry>
+											<geometry>548, 811, 24, 12</geometry>
 											<text>*</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_16_5_34140642_1243343390687_275597_1133'>
-											<geometry>574, 651, 92, 12</geometry>
+											<geometry>564, 802, 92, 12</geometry>
 											<text>+messageAttribute</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5811,19 +5753,19 @@
 							<elementID xmi:idref='_15_5_56101ea_1226074121968_904501_9717'/>
 							<linkFirstEndID xmi:idref='_15_5_56101ea_1226074111296_645888_9691'/>
 							<linkSecondEndID xmi:idref='_15_1_65b0186_1221580139823_317320_1172'/>
-							<geometry>669, 441; 669, 214; 570, 214; </geometry>
+							<geometry>659, 592; 659, 365; 560, 365; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_15_5_56101ea_1225800859734_659416_7904'>
 									<elementID xmi:idref='_15_5_56101ea_1226074121968_543464_9719'/>
-									<geometry>664, 431, 10, 10</geometry>
+									<geometry>654, 582, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225800859750_374621_7917'>
-											<geometry>679, 427, 61, 12</geometry>
+											<geometry>669, 578, 61, 12</geometry>
 											<text>+simpleType</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225800859750_954592_7919'>
-											<geometry>644, 427, 24, 12</geometry>
+											<geometry>634, 578, 24, 12</geometry>
 											<text>0..1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5832,14 +5774,14 @@
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_15_5_56101ea_1225800859734_386545_7903'>
 									<elementID xmi:idref='_15_5_56101ea_1226074121968_653996_9718'/>
-									<geometry>570, 209, 10, 10</geometry>
+									<geometry>560, 360, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_15_5_56101ea_1225800859750_182397_7934'>
-											<geometry>574, 202, 24, 12</geometry>
+											<geometry>564, 353, 24, 12</geometry>
 											<text>*</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_16_5_34140642_1243343390718_536209_1134'>
-											<geometry>573, 199, 114, 12</geometry>
+											<geometry>563, 350, 114, 12</geometry>
 											<text>+messageBuildingBlock</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5866,25 +5808,25 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>623, 441, 93, 34</geometry>
+							<geometry>613, 592, 93, 34</geometry>
 						</mdElement>
 						<mdElement elementClass='Association' xmi:id='_16_0_1_56101ea_1242836166373_655084_1324'>
 							<elementID xmi:idref='_16_0_1_56101ea_1240850866800_158408_778'/>
 							<linkFirstEndID xmi:idref='_14_0_6a60191_1194974311199_762863_3412'/>
 							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311199_762863_3412'/>
-							<geometry>283, 682; 323, 682; 323, 754; 211, 754; 211, 714; </geometry>
+							<geometry>273, 833; 313, 833; 313, 905; 201, 905; 201, 865; </geometry>
 							<nameVisible xmi:value='false'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_16_0_1_56101ea_1242836166373_933714_1325'>
 									<elementID xmi:idref='_16_0_1_56101ea_1240850866800_866344_779'/>
-									<geometry>283, 677, 10, 10</geometry>
+									<geometry>273, 828, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_16_0_1_56101ea_1242836166373_909951_1328'>
-											<geometry>286, 667, 48, 12</geometry>
+											<geometry>276, 818, 48, 12</geometry>
 											<text>+opposite</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_16_0_1_56101ea_1242836166373_985936_1330'>
-											<geometry>286, 685, 24, 12</geometry>
+											<geometry>276, 836, 24, 12</geometry>
 											<text>0..1</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5893,14 +5835,14 @@
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_16_0_1_56101ea_1242836166373_232779_1332'>
 									<elementID xmi:idref='_16_0_1_56101ea_1240850866815_720747_780'/>
-									<geometry>206, 714, 10, 10</geometry>
+									<geometry>196, 865, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_16_0_1_56101ea_1242836166373_397182_1335'>
-											<geometry>214, 717, 24, 12</geometry>
+											<geometry>204, 868, 24, 12</geometry>
 											<text>0..1</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_16_5_34140642_1243343390734_296621_1135'>
-											<geometry>82, 717, 126, 12</geometry>
+											<geometry>72, 868, 126, 12</geometry>
 											<text>+messageAssociationEnd</text>
 										</mdElement>
 									</mdOwnedViews>
@@ -5910,6 +5852,219 @@
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1_56101ea_1242836166373_933714_1325'/>
 							<associationSecondEndID xmi:idref='_16_0_1_56101ea_1242836166373_232779_1332'/>
+						</mdElement>
+						<mdElement elementClass='Class' xmi:id='_16_5_1_56101ea_1245228734609_14158_1712'>
+							<elementID xmi:idref='_16_5_34140642_1243351291078_780232_1098'/>
+							<properties>
+								<mdElement elementClass='BooleanProperty'>
+									<propertyID>SUPPRESS_CLASS_ATTRIBUTES</propertyID>
+									<propertyGroup>ATTRIBUTES</propertyGroup>
+									<propertyDescriptionID>SUPPRESS_CLASS_ATTRIBUTES_DESCRIPTION</propertyDescriptionID>
+									<value xmi:value='true'/>
+								</mdElement>
+								<mdElement elementClass='BooleanProperty'>
+									<propertyID>SUPPRESS_CLASS_OPERATIONS</propertyID>
+									<propertyGroup>OPERATIONS</propertyGroup>
+									<propertyDescriptionID>SUPPRESS_CLASS_OPERATIONS_DESCRIPTION</propertyDescriptionID>
+									<value xmi:value='true'/>
+								</mdElement>
+							</properties>
+							<geometry>14, 168, 93, 34</geometry>
+						</mdElement>
+						<mdElement elementClass='Class' xmi:id='_16_5_1_56101ea_1245228734625_53191_1730'>
+							<elementID xmi:idref='_16_0_1_56101ea_1242834849379_188795_792'/>
+							<properties>
+								<mdElement elementClass='BooleanProperty'>
+									<propertyID>SUPPRESS_CLASS_ATTRIBUTES</propertyID>
+									<propertyGroup>ATTRIBUTES</propertyGroup>
+									<propertyDescriptionID>SUPPRESS_CLASS_ATTRIBUTES_DESCRIPTION</propertyDescriptionID>
+									<value xmi:value='true'/>
+								</mdElement>
+								<mdElement elementClass='BooleanProperty'>
+									<propertyID>SUPPRESS_CLASS_OPERATIONS</propertyID>
+									<propertyGroup>OPERATIONS</propertyGroup>
+									<propertyDescriptionID>SUPPRESS_CLASS_OPERATIONS_DESCRIPTION</propertyDescriptionID>
+									<value xmi:value='true'/>
+								</mdElement>
+							</properties>
+							<geometry>203, 161, 93, 34</geometry>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_5_1_56101ea_1245228734656_291442_1776'>
+							<elementID xmi:idref='_16_5_34140642_1243351275421_373027_1087'/>
+							<linkFirstEndID xmi:idref='_16_5_1_56101ea_1245228734625_53191_1730'/>
+							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311183_255648_3394'/>
+							<geometry>217, 161; 217, 62; 156, 62; </geometry>
+							<nameVisible xmi:value='false'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_5_1_56101ea_1245228734656_877333_1785'>
+									<elementID xmi:idref='_16_5_34140642_1243351275421_131446_1088'/>
+									<geometry>212, 151, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734656_212883_1777'>
+											<geometry>220, 147, 93, 12</geometry>
+											<text>+/generatedSyntax</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734656_540343_1779'>
+											<geometry>192, 147, 24, 12</geometry>
+											<text>1..*</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_5_1_56101ea_1245228734656_212883_1777'/>
+									<roleMultiplicityID xmi:idref='_16_5_1_56101ea_1245228734656_540343_1779'/>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_5_1_56101ea_1245228734656_946206_1788'>
+									<elementID xmi:idref='_16_5_34140642_1243351275421_324755_1089'/>
+									<geometry>156, 57, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734656_732502_1781'>
+											<geometry>133, 63, 75, 12</geometry>
+											<text>+/generatedFor</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734656_940172_1783'>
+											<geometry>161, 49, 24, 12</geometry>
+											<text>*</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_5_1_56101ea_1245228734656_732502_1781'/>
+									<roleMultiplicityID xmi:idref='_16_5_1_56101ea_1245228734656_940172_1783'/>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_5_1_56101ea_1245228734656_877333_1785'/>
+							<associationSecondEndID xmi:idref='_16_5_1_56101ea_1245228734656_946206_1788'/>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_5_1_56101ea_1245228734671_823429_1791'>
+							<elementID xmi:idref='_16_5_34140642_1243353293531_527011_1908'/>
+							<linkFirstEndID xmi:idref='_16_5_1_56101ea_1245228734609_14158_1712'/>
+							<linkSecondEndID xmi:idref='_14_0_6a60191_1194974311183_255648_3394'/>
+							<geometry>39, 168; 39, 62; 63, 62; </geometry>
+							<nameVisible xmi:value='false'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_5_1_56101ea_1245228734671_669865_1800'>
+									<elementID xmi:idref='_16_5_34140642_1243353293531_37187_1910'/>
+									<geometry>34, 158, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734671_906721_1792'>
+											<geometry>42, 154, 73, 12</geometry>
+											<text>+validEncoding</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734671_764056_1794'>
+											<geometry>14, 154, 24, 12</geometry>
+											<text>1..*</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_5_1_56101ea_1245228734671_906721_1792'/>
+									<roleMultiplicityID xmi:idref='_16_5_1_56101ea_1245228734671_764056_1794'/>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_5_1_56101ea_1245228734671_672098_1803'>
+									<elementID xmi:idref='_16_5_34140642_1243353293531_200151_1911'/>
+									<geometry>53, 57, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734671_726286_1796'>
+											<geometry>42, 63, 67, 12</geometry>
+											<text>+messageSet</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245228734671_600958_1798'>
+											<geometry>49, 49, 24, 12</geometry>
+											<text>*</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_5_1_56101ea_1245228734671_726286_1796'/>
+									<roleMultiplicityID xmi:idref='_16_5_1_56101ea_1245228734671_600958_1798'/>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_5_1_56101ea_1245228734671_669865_1800'/>
+							<associationSecondEndID xmi:idref='_16_5_1_56101ea_1245228734671_672098_1803'/>
+						</mdElement>
+						<mdElement elementClass='Tree' xmi:id='_16_5_1_56101ea_1245228926578_314525_1863'>
+							<geometry>137, 436, 175, 0</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='GeneralizationSet' xmi:id='_16_5_1_56101ea_1245228926562_111294_1854'>
+									<elementID xmi:idref='_14_0_6a60191_1200917796391_421863_4402'/>
+									<properties>
+										<mdElement elementClass='BooleanProperty'>
+											<propertyID>AUTOSIZE</propertyID>
+											<propertyDescriptionID>AUTOSIZE_DESCRIPTION</propertyDescriptionID>
+											<value xmi:value='true'/>
+										</mdElement>
+									</properties>
+									<geometry>186, 441, 119, 15</geometry>
+								</mdElement>
+							</mdOwnedViews>
+							<baseShape xmi:idref='_14_0_6a60191_1194974311292_835844_3540'/>
+							<verticalBarX xmi:value='57'/>
+							<verticalBarY xmi:value='452'/>
+							<horizontalBarLeft xmi:value='137'/>
+							<horizontalBarRight xmi:value='312'/>
+							<horizontalBarY xmi:value='436'/>
+							<implicitlySetY xmi:value='true'/>
+							<linkGeneralizationSetID xmi:idref='_16_5_1_56101ea_1245228926562_111294_1854'/>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_5_1_56101ea_1245229311250_495979_1896'>
+							<elementID xmi:idref='_16_5_34140642_1243351300453_706330_1120'/>
+							<linkFirstEndID xmi:idref='_16_5_1_56101ea_1245228734609_14158_1712'/>
+							<linkSecondEndID xmi:idref='_16_5_1_56101ea_1245228734625_53191_1730'/>
+							<geometry>107, 196; 203, 196; 203, 195; </geometry>
+							<nameVisible xmi:value='false'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_5_1_56101ea_1245229311281_973769_1905'>
+									<elementID xmi:idref='_16_5_34140642_1243351300453_9495_1121'/>
+									<geometry>107, 191, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245229311250_881129_1897'>
+											<geometry>77, 203, 97, 12</geometry>
+											<text>+possibleEncodings</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245229311250_449323_1899'>
+											<geometry>112, 182, 24, 12</geometry>
+											<text>1..*</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_5_1_56101ea_1245229311250_881129_1897'/>
+									<roleMultiplicityID xmi:idref='_16_5_1_56101ea_1245229311250_449323_1899'/>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_5_1_56101ea_1245229311281_995275_1908'>
+									<elementID xmi:idref='_16_5_34140642_1243351300453_509358_1122'/>
+									<geometry>193, 190, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245229311250_16801_1901'>
+											<geometry>161, 182, 40, 12</geometry>
+											<text>+syntax</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_5_1_56101ea_1245229311250_169466_1903'>
+											<geometry>196, 196, 24, 12</geometry>
+											<text>1</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_5_1_56101ea_1245229311250_16801_1901'/>
+									<roleMultiplicityID xmi:idref='_16_5_1_56101ea_1245229311250_169466_1903'/>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_5_1_56101ea_1245229311281_973769_1905'/>
+							<associationSecondEndID xmi:idref='_16_5_1_56101ea_1245229311281_995275_1908'/>
+						</mdElement>
+						<mdElement elementClass='Tree' xmi:id='_16_5_1_56101ea_1245230977421_157493_1921'>
+							<geometry>263, 739, 119, 0</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='GeneralizationSet' xmi:id='_16_5_1_56101ea_1245230977406_294028_1912'>
+									<elementID xmi:idref='_15_0_6a60191_1201177328455_941555_8934'/>
+									<properties>
+										<mdElement elementClass='BooleanProperty'>
+											<propertyID>AUTOSIZE</propertyID>
+											<propertyDescriptionID>AUTOSIZE_DESCRIPTION</propertyDescriptionID>
+											<value xmi:value='true'/>
+										</mdElement>
+									</properties>
+									<geometry>354, 721, 88, 15</geometry>
+								</mdElement>
+							</mdOwnedViews>
+							<baseShape xmi:idref='_14_0_6a60191_1194974311370_354555_3667'/>
+							<verticalBarX xmi:value='126'/>
+							<verticalBarY xmi:value='706'/>
+							<horizontalBarLeft xmi:value='263'/>
+							<horizontalBarRight xmi:value='382'/>
+							<horizontalBarY xmi:value='739'/>
+							<implicitlySetY xmi:value='true'/>
+							<linkGeneralizationSetID xmi:idref='_16_5_1_56101ea_1245230977406_294028_1912'/>
 						</mdElement>
 					</mdOwnedViews>
 				</mdElement>
@@ -10003,7 +10158,7 @@
 					<diagramScrollPositionX xmi:value='309'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='true'/>
+					<active xmi:value='false'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramFrame' xmi:id='_15_0_78601b1_1201599199334_62_5639'>
 							<elementID xmi:idref='_12_5_1_34140642_1189781070812_85196_397'/>
@@ -15084,8 +15239,8 @@
 									<geometry>145, 111, 10, 10</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='TextBox' xmi:id='_16_0_1_56101ea_1242834355494_623163_771'>
-											<geometry>98, 114, 49, 12</geometry>
-											<text>+encodes</text>
+											<geometry>80, 114, 67, 12</geometry>
+											<text>+messageSet</text>
 										</mdElement>
 										<mdElement elementClass='TextBox' xmi:id='_16_0_1_56101ea_1242834364229_786455_775'>
 											<geometry>153, 114, 24, 12</geometry>
@@ -15605,7 +15760,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>DIAGRAMS_LAYOUT</propertyID>
 							<propertyDescriptionID>DIAGRAMS_LAYOUT_DESCRIPTION</propertyDescriptionID>
-							<value>0 0 0 14 0 0 0 1 0 0 0 28 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 31 0 30 0 37 0 30 0 38 0 31 0 32 0 5f 0 38 0 35 0 31 0 39 0 36 0 5f 0 33 0 39 0 37 0 0 0 1 0 0 0 ce 0 0 0 e4 0 0 0 10 0 0 0 1a 0 0 0 26 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 36 0 38 0 37 0 30 0 31 0 38 0 34 0 30 0 39 0 34 0 5f 0 38 0 31 0 30 0 34 0 34 0 5f 0 35 0 33 0 36 0 33 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 33 0 33 0 31 0 33 0 30 0 39 0 32 0 33 0 30 0 33 0 31 0 5f 0 39 0 32 0 33 0 33 0 31 0 32 0 5f 0 36 0 34 0 35 0 37 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 38 0 39 0 31 0 35 0 37 0 38 0 31 0 5f 0 38 0 38 0 36 0 39 0 34 0 35 0 5f 0 33 0 34 0 39 0 36 0 0 0 28 0 5f 0 31 0 36 0 5f 0 35 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 32 0 34 0 33 0 33 0 34 0 33 0 34 0 32 0 31 0 33 0 31 0 32 0 5f 0 38 0 39 0 31 0 30 0 38 0 37 0 5f 0 31 0 31 0 33 0 36 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 37 0 31 0 39 0 38 0 38 0 37 0 35 0 5f 0 39 0 37 0 31 0 32 0 34 0 34 0 5f 0 32 0 31 0 37 0 31 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 34 0 32 0 38 0 33 0 33 0 39 0 38 0 34 0 32 0 36 0 37 0 5f 0 37 0 35 0 30 0 38 0 36 0 37 0 5f 0 36 0 34 0 36 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 35 0 33 0 36 0 37 0 38 0 37 0 34 0 35 0 36 0 32 0 5f 0 39 0 31 0 38 0 30 0 38 0 33 0 5f 0 35 0 39 0 37 0 39 0 0 0 27 0 5f 0 31 0 35 0 5f 0 31 0 5f 0 36 0 35 0 62 0 30 0 31 0 38 0 36 0 5f 0 31 0 32 0 31 0 36 0 38 0 31 0 34 0 35 0 34 0 36 0 36 0 35 0 31 0 5f 0 39 0 34 0 33 0 38 0 37 0 34 0 5f 0 31 0 30 0 33 0 37 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 39 0 30 0 34 0 33 0 37 0 38 0 35 0 39 0 5f 0 37 0 31 0 36 0 31 0 38 0 37 0 5f 0 34 0 35 0 36 0 34 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 39 0 30 0 31 0 32 0 32 0 39 0 31 0 34 0 35 0 31 0 35 0 5f 0 33 0 35 0 38 0 31 0 33 0 35 0 5f 0 32 0 32 0 38 0 32 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 36 0 30 0 37 0 32 0 34 0 37 0 34 0 35 0 33 0 31 0 5f 0 37 0 38 0 32 0 39 0 35 0 38 0 5f 0 38 0 36 0 30 0 30 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 32 0 36 0 39 0 32 0 32 0 30 0 36 0 30 0 37 0 37 0 5f 0 31 0 38 0 37 0 39 0 39 0 38 0 5f 0 36 0 30 0 37 0 38 0 0 0 27 0 5f 0 31 0 35 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 31 0 31 0 37 0 35 0 35 0 33 0 32 0 33 0 35 0 34 0 5f 0 33 0 34 0 39 0 38 0 36 0 31 0 5f 0 35 0 39 0 36 0 32 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 35 0 33 0 36 0 38 0 31 0 35 0 30 0 36 0 38 0 37 0 5f 0 38 0 39 0 34 0 34 0 38 0 36 0 5f 0 36 0 33 0 34 0 39 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 38 0 35 0 32 0 32 0 38 0 32 0 38 0 32 0 37 0 32 0 5f 0 31 0 34 0 33 0 36 0 35 0 33 0 5f 0 34 0 39 0 37 0 37 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 37 0 37 0 37 0 35 0 36 0 32 0 35 0 5f 0 38 0 32 0 32 0 34 0 32 0 30 0 5f 0 32 0 36 0 39 0 31 0 0 0 28 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 31 0 30 0 37 0 30 0 38 0 31 0 32 0 5f 0 38 0 35 0 31 0 39 0 36 0 5f 0 33 0 39 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 32 0 33 0 37 0 36 0 36 0 30 0 39 0 5f 0 35 0 30 0 34 0 39 0 39 0 38 0 5f 0 36 0 39 0 39 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 30 0 35 0 38 0 36 0 39 0 34 0 31 0 32 0 32 0 34 0 5f 0 37 0 33 0 36 0 33 0 39 0 35 0 5f 0 31 0 32 0 32 0 32 0 0 0 28 0 5f 0 31 0 35 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 31 0 31 0 38 0 30 0 39 0 36 0 30 0 36 0 35 0 35 0 5f 0 36 0 32 0 30 0 37 0 36 0 38 0 5f 0 31 0 30 0 36 0 36 0 37 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 36 0 30 0 37 0 34 0 33 0 39 0 38 0 32 0 38 0 31 0 5f 0 33 0 36 0 31 0 38 0 32 0 32 0 5f 0 39 0 37 0 36 0 34 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 33 0 39 0 32 0 38 0 33 0 32 0 38 0 5f 0 36 0 32 0 38 0 39 0 35 0 32 0 5f 0 31 0 35 0 34 0 35 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 34 0 33 0 36 0 33 0 38 0 39 0 34 0 36 0 39 0 34 0 5f 0 37 0 39 0 39 0 38 0 39 0 36 0 5f 0 34 0 31 0 36 0 37 0 0 0 26 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 32 0 38 0 32 0 30 0 34 0 32 0 39 0 33 0 36 0 30 0 5f 0 38 0 37 0 32 0 37 0 33 0 5f 0 33 0 37 0 33 0 30 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 31 0 30 0 32 0 32 0 30 0 39 0 31 0 33 0 36 0 31 0 5f 0 33 0 30 0 31 0 38 0 30 0 31 0 5f 0 33 0 30 0 39 0 34 0 0 0 28 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 39 0 34 0 35 0 34 0 36 0 36 0 36 0 35 0 37 0 30 0 33 0 5f 0 33 0 32 0 34 0 31 0 32 0 38 0 5f 0 35 0 32 0 39 0 32 </value>
+							<value>0 0 0 14 0 0 0 1 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 38 0 39 0 31 0 35 0 37 0 38 0 31 0 5f 0 38 0 38 0 36 0 39 0 34 0 35 0 5f 0 33 0 34 0 39 0 36 0 0 0 1 0 0 0 ce 0 0 0 e4 0 0 0 2 0 0 0 1a 0 0 0 26 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 36 0 38 0 37 0 30 0 31 0 38 0 34 0 30 0 39 0 34 0 5f 0 38 0 31 0 30 0 34 0 34 0 5f 0 35 0 33 0 36 0 33 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 33 0 33 0 31 0 33 0 30 0 39 0 32 0 33 0 30 0 33 0 31 0 5f 0 39 0 32 0 33 0 33 0 31 0 32 0 5f 0 36 0 34 0 35 0 37 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 38 0 39 0 31 0 35 0 37 0 38 0 31 0 5f 0 38 0 38 0 36 0 39 0 34 0 35 0 5f 0 33 0 34 0 39 0 36 0 0 0 28 0 5f 0 31 0 36 0 5f 0 35 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 32 0 34 0 33 0 33 0 34 0 33 0 34 0 32 0 31 0 33 0 31 0 32 0 5f 0 38 0 39 0 31 0 30 0 38 0 37 0 5f 0 31 0 31 0 33 0 36 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 37 0 31 0 39 0 38 0 38 0 37 0 35 0 5f 0 39 0 37 0 31 0 32 0 34 0 34 0 5f 0 32 0 31 0 37 0 31 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 34 0 32 0 38 0 33 0 33 0 39 0 38 0 34 0 32 0 36 0 37 0 5f 0 37 0 35 0 30 0 38 0 36 0 37 0 5f 0 36 0 34 0 36 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 35 0 33 0 36 0 37 0 38 0 37 0 34 0 35 0 36 0 32 0 5f 0 39 0 31 0 38 0 30 0 38 0 33 0 5f 0 35 0 39 0 37 0 39 0 0 0 27 0 5f 0 31 0 35 0 5f 0 31 0 5f 0 36 0 35 0 62 0 30 0 31 0 38 0 36 0 5f 0 31 0 32 0 31 0 36 0 38 0 31 0 34 0 35 0 34 0 36 0 36 0 35 0 31 0 5f 0 39 0 34 0 33 0 38 0 37 0 34 0 5f 0 31 0 30 0 33 0 37 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 39 0 30 0 34 0 33 0 37 0 38 0 35 0 39 0 5f 0 37 0 31 0 36 0 31 0 38 0 37 0 5f 0 34 0 35 0 36 0 34 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 31 0 39 0 30 0 31 0 32 0 32 0 39 0 31 0 34 0 35 0 31 0 35 0 5f 0 33 0 35 0 38 0 31 0 33 0 35 0 5f 0 32 0 32 0 38 0 32 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 36 0 30 0 37 0 32 0 34 0 37 0 34 0 35 0 33 0 31 0 5f 0 37 0 38 0 32 0 39 0 35 0 38 0 5f 0 38 0 36 0 30 0 30 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 32 0 36 0 39 0 32 0 32 0 30 0 36 0 30 0 37 0 37 0 5f 0 31 0 38 0 37 0 39 0 39 0 38 0 5f 0 36 0 30 0 37 0 38 0 0 0 27 0 5f 0 31 0 35 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 31 0 31 0 37 0 35 0 35 0 33 0 32 0 33 0 35 0 34 0 5f 0 33 0 34 0 39 0 38 0 36 0 31 0 5f 0 35 0 39 0 36 0 32 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 35 0 33 0 36 0 38 0 31 0 35 0 30 0 36 0 38 0 37 0 5f 0 38 0 39 0 34 0 34 0 38 0 36 0 5f 0 36 0 33 0 34 0 39 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 38 0 35 0 32 0 32 0 38 0 32 0 38 0 32 0 37 0 32 0 5f 0 31 0 34 0 33 0 36 0 35 0 33 0 5f 0 34 0 39 0 37 0 37 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 37 0 37 0 37 0 35 0 36 0 32 0 35 0 5f 0 38 0 32 0 32 0 34 0 32 0 30 0 5f 0 32 0 36 0 39 0 31 0 0 0 28 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 31 0 30 0 37 0 30 0 38 0 31 0 32 0 5f 0 38 0 35 0 31 0 39 0 36 0 5f 0 33 0 39 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 32 0 33 0 37 0 36 0 36 0 30 0 39 0 5f 0 35 0 30 0 34 0 39 0 39 0 38 0 5f 0 36 0 39 0 39 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 30 0 35 0 38 0 36 0 39 0 34 0 31 0 32 0 32 0 34 0 5f 0 37 0 33 0 36 0 33 0 39 0 35 0 5f 0 31 0 32 0 32 0 32 0 0 0 28 0 5f 0 31 0 35 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 31 0 31 0 38 0 30 0 39 0 36 0 30 0 36 0 35 0 35 0 5f 0 36 0 32 0 30 0 37 0 36 0 38 0 5f 0 31 0 30 0 36 0 36 0 37 0 0 0 27 0 5f 0 31 0 35 0 5f 0 35 0 5f 0 35 0 36 0 31 0 30 0 31 0 65 0 61 0 5f 0 31 0 32 0 32 0 36 0 30 0 37 0 34 0 33 0 39 0 38 0 32 0 38 0 31 0 5f 0 33 0 36 0 31 0 38 0 32 0 32 0 5f 0 39 0 37 0 36 0 34 0 0 0 2a 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 38 0 39 0 37 0 38 0 33 0 39 0 32 0 38 0 33 0 32 0 38 0 5f 0 36 0 32 0 38 0 39 0 35 0 32 0 5f 0 31 0 35 0 34 0 35 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 34 0 33 0 36 0 33 0 38 0 39 0 34 0 36 0 39 0 34 0 5f 0 37 0 39 0 39 0 38 0 39 0 36 0 5f 0 34 0 31 0 36 0 37 0 0 0 26 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 37 0 38 0 36 0 30 0 31 0 62 0 31 0 5f 0 31 0 31 0 39 0 32 0 38 0 32 0 30 0 34 0 32 0 39 0 33 0 36 0 30 0 5f 0 38 0 37 0 32 0 37 0 33 0 5f 0 33 0 37 0 33 0 30 0 0 0 27 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 36 0 61 0 36 0 30 0 31 0 39 0 31 0 5f 0 31 0 32 0 30 0 31 0 30 0 32 0 32 0 30 0 39 0 31 0 33 0 36 0 31 0 5f 0 33 0 30 0 31 0 38 0 30 0 31 0 5f 0 33 0 30 0 39 0 34 0 0 0 28 0 5f 0 31 0 34 0 5f 0 30 0 5f 0 33 0 34 0 31 0 34 0 30 0 36 0 34 0 32 0 5f 0 31 0 31 0 39 0 34 0 35 0 34 0 36 0 36 0 36 0 35 0 37 0 30 0 33 0 5f 0 33 0 32 0 34 0 31 0 32 0 38 0 5f 0 35 0 32 0 39 0 32 </value>
 						</mdElement>
 						<mdElement elementClass='StringProperty'>
 							<propertyID>MT_LAST_SELECTED_TRANSFORMATION</propertyID>
@@ -15679,7 +15834,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>INFO_PROPERTY</propertyID>
 							<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-							<value>6 21 6 67 9 1c 6a 16 16 73 41 10 7f 29 69 26 bd d7 2c a a1 32 c1 a9 f4 f2 83 f4 4c 77 34 62 68 17 23 c8 be 41 93 fa e6 b3 a 71 3a 51 bd 34 e2 4 90 d0 3b 8e bb 93 ac 1c 96 d8 90 90 f7 db a1 dd ce 88 8e da 50 c0 </value>
+							<value>6 21 6 67 9 1c 6a 16 16 73 41 10 7f 29 69 26 bd d7 2c a a1 32 c1 a8 f4 f3 84 f4 48 75 34 62 68 17 23 c8 be 41 93 fa e6 b3 a 71 3a 51 bd 34 e2 4 90 d0 3b 8e bb 93 ac 1c 96 d8 90 90 f7 db a1 dd ce 88 8e da 50 c0 </value>
 						</mdElement>
 						<mdElement elementClass='LIST_PROPERTY'>
 							<propertyID>ADDITIONAL_CONTAINMENT_TREES</propertyID>
